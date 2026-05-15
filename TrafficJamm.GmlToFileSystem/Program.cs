@@ -1,5 +1,6 @@
-﻿using System.Xml.Linq;
+﻿using System.Xml;
 using System.Xml.Serialization;
+
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
 
@@ -10,29 +11,55 @@ ConvertXmlToGmlModels();
 
 void ConvertXmlToGmlModels()
 {
-    var xmlPath = "../../../data/20260515.GML.DbDump.xml";
-    var xml = File.ReadAllText(xmlPath);
-    
-    var doc = XDocument.Parse(xml);
-    var root = doc.Root;
-
-    if (root == null) return;
-    
-    var gmlModel = DeserializeElement<GML>(root);
-    Console.WriteLine(gmlModel.AppSpecificInfo.Length + " items");
-    // Process each element based on your GmlModel structure
-    //foreach (var element in gmlModel.AppSpecificInfo)
-    //{
-    //    Console.WriteLine($"Processing: {element.Name}");
-
-    //    // Example: Deserialize to specific GmlModel type
-    //     var gmlModel = DeserializeElement<GML>(element);
-    //}
-}
-
-// Generic deserialization helper
-T DeserializeElement<T>(XElement element) where T : class
-{
-    var serializer = new XmlSerializer(typeof(T));
-    return serializer.Deserialize(element.CreateReader()) as T;
+    try
+    {
+        var xmlPath = "../../../data/20260515.GML.DbDump.xml";
+        
+        using (XmlReader reader = XmlReader.Create(xmlPath))
+        {
+            var serializer = new XmlSerializer(typeof(GML));
+            
+            // Check if the root element can be deserialized
+            if (serializer.CanDeserialize(reader))
+            {
+                var gmlModel = serializer.Deserialize(reader) as GML;
+                
+                if (gmlModel != null)
+                {
+                    Console.WriteLine($"Successfully loaded: {gmlModel.AppSpecificInfo?.Length ?? 0} items");
+                    
+                    // Process each database item
+                    if (gmlModel.AppSpecificInfo != null)
+                    {
+                        foreach (var item in gmlModel.AppSpecificInfo)
+                        {
+                            Console.WriteLine($"Processing item: {item}");
+                            // Add your processing logic here
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("XML structure does not match expected GML format");
+            }
+        }
+    }
+    catch (XmlException xmlEx)
+    {
+        Console.WriteLine($"XML parsing error: {xmlEx.Message}");
+        Console.WriteLine($"Line: {xmlEx.LineNumber}, Position: {xmlEx.LinePosition}");
+    }
+    catch (InvalidOperationException invEx)
+    {
+        Console.WriteLine($"Deserialization error: {invEx.Message}");
+        if (invEx.InnerException != null)
+        {
+            Console.WriteLine($"Inner exception: {invEx.InnerException.Message}");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error: {ex.Message}");
+    }
 }

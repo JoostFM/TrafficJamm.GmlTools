@@ -339,12 +339,11 @@ public partial class GMLDatabaseItem
 public partial class GMLDatabaseItemCategoryInfo
 {
 
-    private byte categoryIdField;
+    private uint categoryIdField;
 
-    private byte categoryParentIdField;
+    private uint categoryParentIdField;
 
-    private byte categoryTypeField;
-
+    private uint categoryTypeField;
     private string categoryTypeAsTextField;
 
     private string categoryCodeField;
@@ -370,7 +369,7 @@ public partial class GMLDatabaseItemCategoryInfo
     private byte formatSepaMinTitleField;
 
     /// <remarks/>
-    public byte CategoryId
+    public uint CategoryId
     {
         get
         {
@@ -383,7 +382,7 @@ public partial class GMLDatabaseItemCategoryInfo
     }
 
     /// <remarks/>
-    public byte CategoryParentId
+    public uint CategoryParentId
     {
         get
         {
@@ -396,7 +395,7 @@ public partial class GMLDatabaseItemCategoryInfo
     }
 
     /// <remarks/>
-    public byte CategoryType
+    public uint CategoryType
     {
         get
         {
@@ -1099,9 +1098,9 @@ public partial class GMLDatabaseItemItemTexts
 public partial class GMLDatabaseItemItemLegal
 {
 
-    private byte legalAlbumIdField;
+    private uint legalAlbumIdField;
 
-    private byte legalTrackIdField;
+    private uint legalTrackIdField;
 
     private object legalArtistIdsField;
 
@@ -1146,7 +1145,7 @@ public partial class GMLDatabaseItemItemLegal
     private object legalCodeISRCField;
 
     /// <remarks/>
-    public byte LegalAlbumId
+    public uint LegalAlbumId
     {
         get
         {
@@ -1159,7 +1158,7 @@ public partial class GMLDatabaseItemItemLegal
     }
 
     /// <remarks/>
-    public byte LegalTrackId
+    public uint LegalTrackId
     {
         get
         {
@@ -1504,29 +1503,29 @@ public partial class GMLDatabaseItemItemTags
 
     private object tagMusicCodeField;
 
-    private byte tagMusicGenreMainField;
+    private int tagMusicGenreMainField;
 
-    private byte tagMusicGenreSub1Field;
+    private int tagMusicGenreSub1Field;
 
-    private byte tagMusicGenreSub2Field;
+    private int tagMusicGenreSub2Field;
 
-    private byte tagMusicGenreSub3Field;
+    private int tagMusicGenreSub3Field;
 
-    private byte tagMusicTypeBeginField;
+    private int tagMusicTypeBeginField;
 
-    private byte tagMusicTypeEndField;
+    private int tagMusicTypeEndField;
 
-    private byte tagMusicKeyBeginField;
+    private int tagMusicKeyBeginField;
 
-    private byte tagMusicKeyMidField;
+    private int tagMusicKeyMidField;
 
-    private byte tagMusicKeyEndField;
+    private int tagMusicKeyEndField;
 
-    private byte tagMusicBpmBeginField;
+    private int tagMusicBpmBeginField;
 
-    private byte tagMusicBpmMidField;
+    private int tagMusicBpmMidField;
 
-    private byte tagMusicBpmEndField;
+    private int tagMusicBpmEndField;
 
     private string tagLanguageISOField;
 
@@ -1883,7 +1882,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicGenreMain
+    public int TagMusicGenreMain
     {
         get
         {
@@ -1896,7 +1895,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicGenreSub1
+    public int TagMusicGenreSub1
     {
         get
         {
@@ -1909,7 +1908,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicGenreSub2
+    public int TagMusicGenreSub2
     {
         get
         {
@@ -1922,7 +1921,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicGenreSub3
+    public int TagMusicGenreSub3
     {
         get
         {
@@ -1935,7 +1934,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicTypeBegin
+    public int TagMusicTypeBegin
     {
         get
         {
@@ -1948,7 +1947,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicTypeEnd
+    public int TagMusicTypeEnd
     {
         get
         {
@@ -1961,7 +1960,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicKeyBegin
+    public int TagMusicKeyBegin
     {
         get
         {
@@ -1974,7 +1973,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicKeyMid
+    public int TagMusicKeyMid
     {
         get
         {
@@ -1987,7 +1986,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicKeyEnd
+    public int TagMusicKeyEnd
     {
         get
         {
@@ -2000,7 +1999,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicBpmBegin
+    public int TagMusicBpmBegin
     {
         get
         {
@@ -2013,7 +2012,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicBpmMid
+    public int TagMusicBpmMid
     {
         get
         {
@@ -2026,7 +2025,7 @@ public partial class GMLDatabaseItemItemTags
     }
 
     /// <remarks/>
-    public byte TagMusicBpmEnd
+    public int TagMusicBpmEnd
     {
         get
         {
@@ -2742,17 +2741,17 @@ public partial class GMLDatabaseItemItemMix
 
     private uint mixTimeTotalField;
 
-    private byte mixTimeFadeInField;
+    private uint mixTimeFadeInField;
 
     private ushort mixTimeFadeOutField;
 
-    private byte mixPosBeginField;
+    private uint mixPosBeginField;
 
     private uint mixPosEndField;
 
     private uint mixPosNextField;
 
-    private byte mixPosIntroField;
+    private uint mixPosIntroField;
 
     private uint mixPosOutroField;
 
@@ -2818,7 +2817,7 @@ public partial class GMLDatabaseItemItemMix
     }
 
     /// <remarks/>
-    public byte MixTimeFadeIn
+    public uint MixTimeFadeIn
     {
         get
         {
@@ -2844,7 +2843,7 @@ public partial class GMLDatabaseItemItemMix
     }
 
     /// <remarks/>
-    public byte MixPosBegin
+    public uint MixPosBegin
     {
         get
         {
@@ -2883,7 +2882,7 @@ public partial class GMLDatabaseItemItemMix
     }
 
     /// <remarks/>
-    public byte MixPosIntro
+    public uint MixPosIntro
     {
         get
         {
@@ -3088,13 +3087,13 @@ public partial class GMLDatabaseItemItemFilesFileAudio
 
     private string fileNameField;
 
-    private byte fileAttrField;
+    private string fileAttrField;
 
     private string fileAttrTextField;
 
-    private object fileCRCField;
+    private string fileCRCField;
 
-    private uint fileSizeField;
+    private uint? fileSizeField;
 
     private ulong fileTimeStampCreatedField;
 
@@ -3142,7 +3141,7 @@ public partial class GMLDatabaseItemItemFilesFileAudio
     }
 
     /// <remarks/>
-    public byte FileAttr
+    public string FileAttr
     {
         get
         {
@@ -3168,7 +3167,7 @@ public partial class GMLDatabaseItemItemFilesFileAudio
     }
 
     /// <remarks/>
-    public object FileCRC
+    public string FileCRC
     {
         get
         {
@@ -3181,54 +3180,54 @@ public partial class GMLDatabaseItemItemFilesFileAudio
     }
 
     /// <remarks/>
-    public uint FileSize
+    public string FileSize 
     {
         get
         {
-            return this.fileSizeField;
+            return this.fileSizeField?.ToString();
         }
         set
         {
-            this.fileSizeField = value;
+            this.fileSizeField = string.IsNullOrEmpty(value) ? (uint?)null : uint.Parse(value);
         }
     }
 
     /// <remarks/>
-    public ulong FileTimeStampCreated
+    public string FileTimeStampCreated
     {
         get
         {
-            return this.fileTimeStampCreatedField;
+            return this.fileTimeStampCreatedField.ToString();
         }
         set
         {
-            this.fileTimeStampCreatedField = value;
+            this.fileTimeStampCreatedField = string.IsNullOrEmpty(value) ? 0 : ulong.Parse(value);
         }
     }
 
     /// <remarks/>
-    public ulong FileTimeStampModified
+    public string FileTimeStampModified
     {
         get
         {
-            return this.fileTimeStampModifiedField;
+            return this.fileTimeStampModifiedField.ToString();
         }
         set
         {
-            this.fileTimeStampModifiedField = value;
+            this.fileTimeStampModifiedField = string.IsNullOrEmpty(value) ? 0 : ulong.Parse(value);
         }
     }
 
     /// <remarks/>
-    public ulong FileTimeStampAccessed
+    public string FileTimeStampAccessed
     {
         get
         {
-            return this.fileTimeStampAccessedField;
+            return this.fileTimeStampAccessedField.ToString();
         }
         set
         {
-            this.fileTimeStampAccessedField = value;
+            this.fileTimeStampAccessedField = string.IsNullOrEmpty(value) ? 0 : ulong.Parse(value);
         }
     }
 }
