@@ -1,10 +1,11 @@
 using System.IO.Abstractions;
+using Microsoft.Extensions.Logging;
 using NSubstitute;
 using NSubstitute.ExceptionExtensions;
 using TrafficJamm.GmlToFileSystem.Gml;
 using TrafficJamm.GmlToFileSystem.Gml.Models;
 
-namespace TrafficJamm.GmlToFileSystemTests.Gml;
+namespace TrafficJamm.GmlToFileSystem.Tests.Gml;
 
 public class DbDumpFileServiceTests
 {
@@ -13,7 +14,8 @@ public class DbDumpFileServiceTests
 
     public DbDumpFileServiceTests()
     {
-        _service = new DbDumpFileService(_fileSystem);
+        var logger = Substitute.For<ILogger<DbDumpFileService>>();
+        _service = new DbDumpFileService(_fileSystem, logger);
     }
 
     #region GetDbDumpFilePath - Null/Invalid Input Tests
@@ -22,7 +24,7 @@ public class DbDumpFileServiceTests
     public void GetDbDumpFilePath_WithNullRequest_ThrowsArgumentNullException()
     {
         // Arrange
-        DbDumpRequest? request = null;
+        DbDumpRequest request = null;
 
         // Act & Assert
         var exception = Assert.Throws<ArgumentNullException>(() => _service.GetDbDumpFilePath(request!));

@@ -1,56 +1,26 @@
-﻿using System;
+﻿
+using System.Xml.Serialization;
+
+namespace TrafficJamm.GmlToFileSystem.Gml.Models;
+
 // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
 [Serializable()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-[System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-public partial class GML
+//[System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+
+[XmlRoot("GML")]
+public partial class GmlModel
 {
-    private GMLFileInfo fileInfoField;
-
-    private GMLAppInfo appInfoField;
-
-    private GMLDatabaseItem[] appSpecificInfoField;
+    /// <remarks/>
+    public GMLFileInfo FileInfo { get; set; }
 
     /// <remarks/>
-    public GMLFileInfo FileInfo
-    {
-        get
-        {
-            return this.fileInfoField;
-        }
-        set
-        {
-            this.fileInfoField = value;
-        }
-    }
-
-    /// <remarks/>
-    public GMLAppInfo AppInfo
-    {
-        get
-        {
-            return this.appInfoField;
-        }
-        set
-        {
-            this.appInfoField = value;
-        }
-    }
+    public GMLAppInfo AppInfo { get; set; }
 
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("DatabaseItem", IsNullable = false)]
-    public GMLDatabaseItem[] AppSpecificInfo
-    {
-        get
-        {
-            return this.appSpecificInfoField;
-        }
-        set
-        {
-            this.appSpecificInfoField = value;
-        }
-    }
+    public GMLDatabaseItem[] AppSpecificInfo { get; set; }
 }
 
 /// <remarks/>
@@ -59,36 +29,11 @@ public partial class GML
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLFileInfo
 {
-
-    private string copyrightField;
-
-    private ulong timeStampField;
+    /// <remarks/>
+    public string Copyright { get; set; }
 
     /// <remarks/>
-    public string Copyright
-    {
-        get
-        {
-            return this.copyrightField;
-        }
-        set
-        {
-            this.copyrightField = value;
-        }
-    }
-
-    /// <remarks/>
-    public ulong TimeStamp
-    {
-        get
-        {
-            return this.timeStampField;
-        }
-        set
-        {
-            this.timeStampField = value;
-        }
-    }
+    public ulong TimeStamp { get; set; }
 }
 
 /// <remarks/>
@@ -97,7 +42,6 @@ public partial class GMLFileInfo
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLAppInfo
 {
-
     /// <remarks/>
     public string AppName { get; set; }
 
@@ -162,230 +106,50 @@ public partial class GMLDatabaseItem
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemCategoryInfo
 {
-
-    private uint categoryIdField;
-
-    private uint categoryParentIdField;
-
-    private uint categoryTypeField;
-    private string categoryTypeAsTextField;
-
-    private string categoryCodeField;
-
-    private string categoryNameField;
-
-    private string categoryNamePathField;
-
-    private object categoryDescriptionField;
-
-    private byte categoryRecMaxDurationField;
-
-    private byte categoryPathIdField;
-
-    private string categoryPathField;
-
-    private string categoryColorField;
-
-    private byte formatDefaultGenreField;
-
-    private byte formatSepaMinArtistField;
-
-    private byte formatSepaMinTitleField;
+    /// <remarks/>
+    public uint CategoryId { get; set; }
 
     /// <remarks/>
-    public uint CategoryId
-    {
-        get
-        {
-            return this.categoryIdField;
-        }
-        set
-        {
-            this.categoryIdField = value;
-        }
-    }
+    public uint CategoryParentId { get; set; }
 
     /// <remarks/>
-    public uint CategoryParentId
-    {
-        get
-        {
-            return this.categoryParentIdField;
-        }
-        set
-        {
-            this.categoryParentIdField = value;
-        }
-    }
+    public uint CategoryType { get; set; }
 
     /// <remarks/>
-    public uint CategoryType
-    {
-        get
-        {
-            return this.categoryTypeField;
-        }
-        set
-        {
-            this.categoryTypeField = value;
-        }
-    }
+    public string CategoryTypeAsText { get; set; }
 
     /// <remarks/>
-    public string CategoryTypeAsText
-    {
-        get
-        {
-            return this.categoryTypeAsTextField;
-        }
-        set
-        {
-            this.categoryTypeAsTextField = value;
-        }
-    }
+    public string CategoryCode { get; set; }
 
     /// <remarks/>
-    public string CategoryCode
-    {
-        get
-        {
-            return this.categoryCodeField;
-        }
-        set
-        {
-            this.categoryCodeField = value;
-        }
-    }
+    public string CategoryName { get; set; }
 
     /// <remarks/>
-    public string CategoryName
-    {
-        get
-        {
-            return this.categoryNameField;
-        }
-        set
-        {
-            this.categoryNameField = value;
-        }
-    }
+    public string CategoryNamePath { get; set; }
 
     /// <remarks/>
-    public string CategoryNamePath
-    {
-        get
-        {
-            return this.categoryNamePathField;
-        }
-        set
-        {
-            this.categoryNamePathField = value;
-        }
-    }
+    public object CategoryDescription { get; set; }
 
     /// <remarks/>
-    public object CategoryDescription
-    {
-        get
-        {
-            return this.categoryDescriptionField;
-        }
-        set
-        {
-            this.categoryDescriptionField = value;
-        }
-    }
+    public byte CategoryRecMaxDuration { get; set; }
 
     /// <remarks/>
-    public byte CategoryRecMaxDuration
-    {
-        get
-        {
-            return this.categoryRecMaxDurationField;
-        }
-        set
-        {
-            this.categoryRecMaxDurationField = value;
-        }
-    }
+    public byte CategoryPathId { get; set; }
 
     /// <remarks/>
-    public byte CategoryPathId
-    {
-        get
-        {
-            return this.categoryPathIdField;
-        }
-        set
-        {
-            this.categoryPathIdField = value;
-        }
-    }
+    public string CategoryPath { get; set; }
 
     /// <remarks/>
-    public string CategoryPath
-    {
-        get
-        {
-            return this.categoryPathField;
-        }
-        set
-        {
-            this.categoryPathField = value;
-        }
-    }
+    public string CategoryColor { get; set; }
 
     /// <remarks/>
-    public string CategoryColor
-    {
-        get
-        {
-            return this.categoryColorField;
-        }
-        set
-        {
-            this.categoryColorField = value;
-        }
-    }
+    public byte FormatDefaultGenre { get; set; }
 
     /// <remarks/>
-    public byte FormatDefaultGenre
-    {
-        get
-        {
-            return this.formatDefaultGenreField;
-        }
-        set
-        {
-            this.formatDefaultGenreField = value;
-        }
-    }
+    public byte FormatSepaMinArtist { get; set; }
 
     /// <remarks/>
-    public byte FormatSepaMinArtist
-    {
-        get
-        {
-            return this.formatSepaMinArtistField;
-        }
-        set
-        {
-            this.formatSepaMinArtistField = value;
-        }
-    }
-
-    /// <remarks/>
-    public byte FormatSepaMinTitle
-    {
-        get
-        {
-            return this.formatSepaMinTitleField;
-        }
-        set
-        {
-            this.formatSepaMinTitleField = value;
-        }
-    }
+    public byte FormatSepaMinTitle { get; set; }
 }
 
 /// <remarks/>
@@ -394,7 +158,6 @@ public partial class GMLDatabaseItemCategoryInfo
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemItemInfo
 {
-
     /// <remarks/>
     public ushort ItemId { get; set; }
 
@@ -431,7 +194,7 @@ public partial class GMLDatabaseItemItemInfo
     /// <remarks/>
     public string ItemInterpret { get; set; }
 
-    public override string ToString() => $"{ItemInterpret} - {ItemTitle} ({ItemTypeAsText})";    
+    public override string ToString() => $"{ItemInterpret} - {ItemTitle} ({ItemTypeAsText})";
 }
 
 /// <remarks/>
@@ -440,201 +203,44 @@ public partial class GMLDatabaseItemItemInfo
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemItemDates
 {
-
-    private ulong timeStampCreatedField;
-
-    private ulong timeStampModifiedField;
-
-    private ulong timeStampRecordedField;
-
-    private ulong timeStampImportedField;
-
-    private ulong timeStampExportedField;
-
-    private ulong timeStampSyncedField;
-
-    private ulong timeStampPlannedField;
-
-    private ulong timeStampUsedField;
-
-    private ulong timeStampTrashedField;
-
-    private ulong timeStampRangeStartField;
-
-    private ulong timeStampRangeEndField;
-
-    private ulong timeStampRangeWarnField;
-
-    private ulong timeStampRangeExpiryField;
+    /// <remarks/>
+    public ulong TimeStampCreated { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampCreated
-    {
-        get
-        {
-            return this.timeStampCreatedField;
-        }
-        set
-        {
-            this.timeStampCreatedField = value;
-        }
-    }
+    public ulong TimeStampModified { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampModified
-    {
-        get
-        {
-            return this.timeStampModifiedField;
-        }
-        set
-        {
-            this.timeStampModifiedField = value;
-        }
-    }
+    public ulong TimeStampRecorded { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampRecorded
-    {
-        get
-        {
-            return this.timeStampRecordedField;
-        }
-        set
-        {
-            this.timeStampRecordedField = value;
-        }
-    }
+    public ulong TimeStampImported { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampImported
-    {
-        get
-        {
-            return this.timeStampImportedField;
-        }
-        set
-        {
-            this.timeStampImportedField = value;
-        }
-    }
+    public ulong TimeStampExported { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampExported
-    {
-        get
-        {
-            return this.timeStampExportedField;
-        }
-        set
-        {
-            this.timeStampExportedField = value;
-        }
-    }
+    public ulong TimeStampSynced { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampSynced
-    {
-        get
-        {
-            return this.timeStampSyncedField;
-        }
-        set
-        {
-            this.timeStampSyncedField = value;
-        }
-    }
+    public ulong TimeStampPlanned { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampPlanned
-    {
-        get
-        {
-            return this.timeStampPlannedField;
-        }
-        set
-        {
-            this.timeStampPlannedField = value;
-        }
-    }
+    public ulong TimeStampUsed { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampUsed
-    {
-        get
-        {
-            return this.timeStampUsedField;
-        }
-        set
-        {
-            this.timeStampUsedField = value;
-        }
-    }
+    public ulong TimeStampTrashed { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampTrashed
-    {
-        get
-        {
-            return this.timeStampTrashedField;
-        }
-        set
-        {
-            this.timeStampTrashedField = value;
-        }
-    }
+    public ulong TimeStampRangeStart { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampRangeStart
-    {
-        get
-        {
-            return this.timeStampRangeStartField;
-        }
-        set
-        {
-            this.timeStampRangeStartField = value;
-        }
-    }
+    public ulong TimeStampRangeEnd { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampRangeEnd
-    {
-        get
-        {
-            return this.timeStampRangeEndField;
-        }
-        set
-        {
-            this.timeStampRangeEndField = value;
-        }
-    }
+    public ulong TimeStampRangeWarn { get; set; }
 
     /// <remarks/>
-    public ulong TimeStampRangeWarn
-    {
-        get
-        {
-            return this.timeStampRangeWarnField;
-        }
-        set
-        {
-            this.timeStampRangeWarnField = value;
-        }
-    }
-
-    /// <remarks/>
-    public ulong TimeStampRangeExpiry
-    {
-        get
-        {
-            return this.timeStampRangeExpiryField;
-        }
-        set
-        {
-            this.timeStampRangeExpiryField = value;
-        }
-    }
+    public ulong TimeStampRangeExpiry { get; set; }
 }
 
 /// <remarks/>
@@ -643,51 +249,14 @@ public partial class GMLDatabaseItemItemDates
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemItemReferences
 {
-
-    private string refReferenceField;
-
-    private object refItemCodeField;
-
-    private object refMosObjectIdField;
+    /// <remarks/>
+    public string RefReference { get; set; }
 
     /// <remarks/>
-    public string RefReference
-    {
-        get
-        {
-            return this.refReferenceField;
-        }
-        set
-        {
-            this.refReferenceField = value;
-        }
-    }
+    public object RefItemCode { get; set; }
 
     /// <remarks/>
-    public object RefItemCode
-    {
-        get
-        {
-            return this.refItemCodeField;
-        }
-        set
-        {
-            this.refItemCodeField = value;
-        }
-    }
-
-    /// <remarks/>
-    public object RefMosObjectId
-    {
-        get
-        {
-            return this.refMosObjectIdField;
-        }
-        set
-        {
-            this.refMosObjectIdField = value;
-        }
-    }
+    public object RefMosObjectId { get; set; }
 }
 
 /// <remarks/>
@@ -696,81 +265,20 @@ public partial class GMLDatabaseItemItemReferences
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemItemTexts
 {
-
-    private object textComment1Field;
-
-    private object textComment2Field;
-
-    private string textComment3Field;
-
-    private object textComment4Field;
-
-    private object textSetupField;
+    /// <remarks/>
+    public object TextComment1 { get; set; }
 
     /// <remarks/>
-    public object TextComment1
-    {
-        get
-        {
-            return this.textComment1Field;
-        }
-        set
-        {
-            this.textComment1Field = value;
-        }
-    }
+    public object TextComment2 { get; set; }
 
     /// <remarks/>
-    public object TextComment2
-    {
-        get
-        {
-            return this.textComment2Field;
-        }
-        set
-        {
-            this.textComment2Field = value;
-        }
-    }
+    public string TextComment3 { get; set; }
 
     /// <remarks/>
-    public string TextComment3
-    {
-        get
-        {
-            return this.textComment3Field;
-        }
-        set
-        {
-            this.textComment3Field = value;
-        }
-    }
+    public object TextComment4 { get; set; }
 
     /// <remarks/>
-    public object TextComment4
-    {
-        get
-        {
-            return this.textComment4Field;
-        }
-        set
-        {
-            this.textComment4Field = value;
-        }
-    }
-
-    /// <remarks/>
-    public object TextSetup
-    {
-        get
-        {
-            return this.textSetupField;
-        }
-        set
-        {
-            this.textSetupField = value;
-        }
-    }
+    public object TextSetup { get; set; }
 }
 
 /// <remarks/>
@@ -2348,36 +1856,11 @@ public partial class GMLDatabaseItemItemRds
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemItemMeta
 {
-
-    private object metaOriginSiteNameField;
-
-    private object metaOriginItemIdField;
+    /// <remarks/>
+    public object MetaOriginSiteName { get; set; }
 
     /// <remarks/>
-    public object MetaOriginSiteName
-    {
-        get
-        {
-            return this.metaOriginSiteNameField;
-        }
-        set
-        {
-            this.metaOriginSiteNameField = value;
-        }
-    }
-
-    /// <remarks/>
-    public object MetaOriginItemId
-    {
-        get
-        {
-            return this.metaOriginItemIdField;
-        }
-        set
-        {
-            this.metaOriginItemIdField = value;
-        }
-    }
+    public object MetaOriginItemId { get; set; }
 
     /// <remarks/>
     public string MetaKeyWords { get; set; }
@@ -2393,320 +1876,68 @@ public partial class GMLDatabaseItemItemMeta
 public partial class GMLDatabaseItemItemMix
 {
 
-    private byte lvlAdjLeftField;
-
-    private byte lvlAdjRightField;
-
-    private uint mixTimeTotalField;
-
-    private uint mixTimeFadeInField;
-
-    private ushort mixTimeFadeOutField;
-
-    private uint mixPosBeginField;
-
-    private uint mixPosEndField;
-
-    private uint mixPosNextField;
-
-    private uint mixPosIntroField;
-
-    private uint mixPosOutroField;
-
-    private uint hookPosInField;
-
-    private uint hookPosOutField;
-
-    private uint hookPosNextField;
-
-    private uint hotCuePosAField;
-
-    private uint hotCuePosBField;
-
-    private uint hotCuePosCField;
-
-    private uint hotCuePosDField;
-
-    private uint triggerPos1Field;
-
-    private uint triggerPos2Field;
-
-    private uint triggerPos3Field;
-
-    private uint triggerPos4Field;
+    /// <remarks/>
+    public byte LvlAdjLeft { get; set; }
 
     /// <remarks/>
-    public byte LvlAdjLeft
-    {
-        get
-        {
-            return this.lvlAdjLeftField;
-        }
-        set
-        {
-            this.lvlAdjLeftField = value;
-        }
-    }
+    public byte LvlAdjRight { get; set; }
 
     /// <remarks/>
-    public byte LvlAdjRight
-    {
-        get
-        {
-            return this.lvlAdjRightField;
-        }
-        set
-        {
-            this.lvlAdjRightField = value;
-        }
-    }
+    public uint MixTimeTotal { get; set; }
 
     /// <remarks/>
-    public uint MixTimeTotal
-    {
-        get
-        {
-            return this.mixTimeTotalField;
-        }
-        set
-        {
-            this.mixTimeTotalField = value;
-        }
-    }
+    public uint MixTimeFadeIn { get; set; }
 
     /// <remarks/>
-    public uint MixTimeFadeIn
-    {
-        get
-        {
-            return this.mixTimeFadeInField;
-        }
-        set
-        {
-            this.mixTimeFadeInField = value;
-        }
-    }
+    public uint MixTimeFadeOut { get; set; }
 
     /// <remarks/>
-    public ushort MixTimeFadeOut
-    {
-        get
-        {
-            return this.mixTimeFadeOutField;
-        }
-        set
-        {
-            this.mixTimeFadeOutField = value;
-        }
-    }
+    public uint MixPosBegin { get; set; }
 
     /// <remarks/>
-    public uint MixPosBegin
-    {
-        get
-        {
-            return this.mixPosBeginField;
-        }
-        set
-        {
-            this.mixPosBeginField = value;
-        }
-    }
+    public uint MixPosEnd { get; set; }
 
     /// <remarks/>
-    public uint MixPosEnd
-    {
-        get
-        {
-            return this.mixPosEndField;
-        }
-        set
-        {
-            this.mixPosEndField = value;
-        }
-    }
+    public uint MixPosNext { get; set; }
 
     /// <remarks/>
-    public uint MixPosNext
-    {
-        get
-        {
-            return this.mixPosNextField;
-        }
-        set
-        {
-            this.mixPosNextField = value;
-        }
-    }
+    public uint MixPosIntro { get; set; }
 
     /// <remarks/>
-    public uint MixPosIntro
-    {
-        get
-        {
-            return this.mixPosIntroField;
-        }
-        set
-        {
-            this.mixPosIntroField = value;
-        }
-    }
+    public uint MixPosOutro { get; set; }
 
     /// <remarks/>
-    public uint MixPosOutro
-    {
-        get
-        {
-            return this.mixPosOutroField;
-        }
-        set
-        {
-            this.mixPosOutroField = value;
-        }
-    }
+    public uint HookPosIn { get; set; }
 
     /// <remarks/>
-    public uint HookPosIn
-    {
-        get
-        {
-            return this.hookPosInField;
-        }
-        set
-        {
-            this.hookPosInField = value;
-        }
-    }
+    public uint HookPosOut { get; set; }
 
     /// <remarks/>
-    public uint HookPosOut
-    {
-        get
-        {
-            return this.hookPosOutField;
-        }
-        set
-        {
-            this.hookPosOutField = value;
-        }
-    }
+    public uint HookPosNext { get; set; }
 
     /// <remarks/>
-    public uint HookPosNext
-    {
-        get
-        {
-            return this.hookPosNextField;
-        }
-        set
-        {
-            this.hookPosNextField = value;
-        }
-    }
+    public uint HotCuePosA { get; set; }
 
     /// <remarks/>
-    public uint HotCuePosA
-    {
-        get
-        {
-            return this.hotCuePosAField;
-        }
-        set
-        {
-            this.hotCuePosAField = value;
-        }
-    }
+    public uint HotCuePosB { get; set; }
 
     /// <remarks/>
-    public uint HotCuePosB
-    {
-        get
-        {
-            return this.hotCuePosBField;
-        }
-        set
-        {
-            this.hotCuePosBField = value;
-        }
-    }
+    public uint HotCuePosC { get; set; }
 
     /// <remarks/>
-    public uint HotCuePosC
-    {
-        get
-        {
-            return this.hotCuePosCField;
-        }
-        set
-        {
-            this.hotCuePosCField = value;
-        }
-    }
+    public uint HotCuePosD { get; set; }
 
     /// <remarks/>
-    public uint HotCuePosD
-    {
-        get
-        {
-            return this.hotCuePosDField;
-        }
-        set
-        {
-            this.hotCuePosDField = value;
-        }
-    }
+    public uint TriggerPos1 { get; set; }
 
     /// <remarks/>
-    public uint TriggerPos1
-    {
-        get
-        {
-            return this.triggerPos1Field;
-        }
-        set
-        {
-            this.triggerPos1Field = value;
-        }
-    }
+    public uint TriggerPos2 { get; set; }
 
     /// <remarks/>
-    public uint TriggerPos2
-    {
-        get
-        {
-            return this.triggerPos2Field;
-        }
-        set
-        {
-            this.triggerPos2Field = value;
-        }
-    }
+    public uint TriggerPos3 { get; set; }
 
     /// <remarks/>
-    public uint TriggerPos3
-    {
-        get
-        {
-            return this.triggerPos3Field;
-        }
-        set
-        {
-            this.triggerPos3Field = value;
-        }
-    }
-
-    /// <remarks/>
-    public uint TriggerPos4
-    {
-        get
-        {
-            return this.triggerPos4Field;
-        }
-        set
-        {
-            this.triggerPos4Field = value;
-        }
-    }
+    public uint TriggerPos4 { get; set; }
 }
 
 /// <remarks/>
@@ -2715,21 +1946,8 @@ public partial class GMLDatabaseItemItemMix
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemItemFiles
 {
-
-    private GMLDatabaseItemItemFilesFileAudio fileAudioField;
-
     /// <remarks/>
-    public GMLDatabaseItemItemFilesFileAudio FileAudio
-    {
-        get
-        {
-            return this.fileAudioField;
-        }
-        set
-        {
-            this.fileAudioField = value;
-        }
-    }
+    public GMLDatabaseItemItemFilesFileAudio FileAudio { get; set; }
 }
 
 /// <remarks/>

@@ -4,7 +4,7 @@ namespace TrafficJamm.GmlToFileSystem.Models;
 
 public class Result<T> : Result
 {
-    public T? Data { get; set; }
+    public T Data { get; set; } = default!;
 }
 
 public class Result
