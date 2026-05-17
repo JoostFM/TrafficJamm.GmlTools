@@ -1,65 +1,74 @@
-﻿using System.Xml;
-using System.Xml.Serialization;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Serilog;
+using System.IO.Abstractions;
+using TrafficJamm.GmlToFileSystem;
+using TrafficJamm.GmlToFileSystem.Gml.Models;
 
-// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+var host = Host.CreateDefaultBuilder(args)
+    .ConfigureAppConfiguration((context, config) =>
+    {
+        config
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddEnvironmentVariables();
+    })
+    .ConfigureServices((context, services) =>
+    {
+        services.AddTransient<IFileSystem, FileSystem>();
+        services.AddGmlApiServices();
+    })
+    .UseSerilog((context, loggerConfig) =>
+    {
+        loggerConfig
+            .MinimumLevel.Information()
+            .WriteTo.Console()
+            .WriteTo.File("logs/gml-conversion-.txt", rollingInterval: RollingInterval.Day)
+            .Enrich.FromLogContext()
+            .Enrich.WithProperty("Application", "TrafficJamm.GmlToFileSystem");
+    })
+    .Build();
 
+var logger = host.Services.GetRequiredService<ILogger<Program>>();
 
-Console.WriteLine("Converting XML to GmlModels...");
-
-ConvertXmlToGmlModels();
-
-void ConvertXmlToGmlModels()
+try
 {
-    try
+    logger.LogInformation("Starting GML conversion process...");
+
+    var gmlApi = host.Services.GetRequiredService<IGmlApi>();
+
+    var request = new DbDumpRequest
     {
-        var xmlPath = "../../../data/20260515.GML.DbDump.xml";
-        
-        using (XmlReader reader = XmlReader.Create(xmlPath))
-        {
-            var serializer = new XmlSerializer(typeof(GML));
-            
-            // Check if the root element can be deserialized
-            if (serializer.CanDeserialize(reader))
-            {
-                var gmlModel = serializer.Deserialize(reader) as GML;
-                
-                if (gmlModel != null)
-                {
-                    Console.WriteLine($"Successfully loaded: {gmlModel.AppSpecificInfo?.Length ?? 0} items");
-                    
-                    // Process each database item
-                    if (gmlModel.AppSpecificInfo != null)
-                    {
-                        foreach (var item in gmlModel.AppSpecificInfo)
-                        {
-                            Console.WriteLine($"Processing item: {item}");
-                            // Add your processing logic here
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("XML structure does not match expected GML format");
-            }
-        }
-    }
-    catch (XmlException xmlEx)
+        DbDumpFileLocationPath = @"D:\JammFM\GML\Dump\Xml",
+        DbDumpFileName = "20260515.GML.DbDump.xml",
+        TargetFilePath = @"D:\JammFM\GML\GmlTrackIndex"
+    };
+
+    logger.LogInformation("Processing XML dump from: {Path}", request.DbDumpFileLocationPath);
+    logger.LogInformation("Target output directory: {Target}", request.TargetFilePath);
+
+    var result = await gmlApi.CreateTrackListFromXmlDbDumpGmlAsync(request);
+
+    if (result.Success)
     {
-        Console.WriteLine($"XML parsing error: {xmlEx.Message}");
-        Console.WriteLine($"Line: {xmlEx.LineNumber}, Position: {xmlEx.LinePosition}");
+        logger.LogInformation("Conversion completed successfully. Output: {Output}", result.Data);
+        logger.LogInformation("Message: {Message}", result.Message);
     }
-    catch (InvalidOperationException invEx)
+    else
     {
-        Console.WriteLine($"Deserialization error: {invEx.Message}");
-        if (invEx.InnerException != null)
-        {
-            Console.WriteLine($"Inner exception: {invEx.InnerException.Message}");
-        }
+        logger.LogError("Conversion failed. Message: {Message}", result.Message);
+        Environment.Exit(1);
     }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error: {ex.Message}");
-    }
+}
+catch (Exception ex)
+{
+    logger.LogError(ex, "An unexpected error occurred during GML conversion");
+    Environment.Exit(1);
+}
+finally
+{
+    logger.LogInformation("GML conversion process completed");
+    //await host.RunAsync();
 }
