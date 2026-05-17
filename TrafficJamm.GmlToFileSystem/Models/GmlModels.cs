@@ -98,65 +98,17 @@ public partial class GMLFileInfo
 public partial class GMLAppInfo
 {
 
-    private string appNameField;
-
-    private string appBuildField;
-
-    private ushort appVersionField;
-
-    private uint appReleaseField;
+    /// <remarks/>
+    public string AppName { get; set; }
 
     /// <remarks/>
-    public string AppName
-    {
-        get
-        {
-            return this.appNameField;
-        }
-        set
-        {
-            this.appNameField = value;
-        }
-    }
+    public string AppBuild { get; set; }
 
     /// <remarks/>
-    public string AppBuild
-    {
-        get
-        {
-            return this.appBuildField;
-        }
-        set
-        {
-            this.appBuildField = value;
-        }
-    }
+    public ushort AppVersion { get; set; }
 
     /// <remarks/>
-    public ushort AppVersion
-    {
-        get
-        {
-            return this.appVersionField;
-        }
-        set
-        {
-            this.appVersionField = value;
-        }
-    }
-
-    /// <remarks/>
-    public uint AppRelease
-    {
-        get
-        {
-            return this.appReleaseField;
-        }
-        set
-        {
-            this.appReleaseField = value;
-        }
-    }
+    public uint AppRelease { get; set; }
 }
 
 /// <remarks/>
@@ -165,170 +117,42 @@ public partial class GMLAppInfo
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItem
 {
-
-    private GMLDatabaseItemCategoryInfo categoryInfoField;
-
-    private GMLDatabaseItemItemInfo itemInfoField;
-
-    private GMLDatabaseItemItemDates itemDatesField;
-
-    private GMLDatabaseItemItemReferences itemReferencesField;
-
-    private GMLDatabaseItemItemTexts itemTextsField;
-
-    private GMLDatabaseItemItemLegal itemLegalField;
-
-    private GMLDatabaseItemItemTags itemTagsField;
-
-    private GMLDatabaseItemItemRds itemRdsField;
-
-    private GMLDatabaseItemItemMeta itemMetaField;
-
-    private GMLDatabaseItemItemMix itemMixField;
-
-    private GMLDatabaseItemItemFiles itemFilesField;
+    /// <remarks/>
+    public GMLDatabaseItemCategoryInfo CategoryInfo { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemCategoryInfo CategoryInfo
-    {
-        get
-        {
-            return this.categoryInfoField;
-        }
-        set
-        {
-            this.categoryInfoField = value;
-        }
-    }
+    public GMLDatabaseItemItemInfo ItemInfo { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemInfo ItemInfo
-    {
-        get
-        {
-            return this.itemInfoField;
-        }
-        set
-        {
-            this.itemInfoField = value;
-        }
-    }
+    public GMLDatabaseItemItemDates ItemDates { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemDates ItemDates
-    {
-        get
-        {
-            return this.itemDatesField;
-        }
-        set
-        {
-            this.itemDatesField = value;
-        }
-    }
+    public GMLDatabaseItemItemReferences ItemReferences { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemReferences ItemReferences
-    {
-        get
-        {
-            return this.itemReferencesField;
-        }
-        set
-        {
-            this.itemReferencesField = value;
-        }
-    }
+    public GMLDatabaseItemItemTexts ItemTexts { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemTexts ItemTexts
-    {
-        get
-        {
-            return this.itemTextsField;
-        }
-        set
-        {
-            this.itemTextsField = value;
-        }
-    }
+    public GMLDatabaseItemItemLegal ItemLegal { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemLegal ItemLegal
-    {
-        get
-        {
-            return this.itemLegalField;
-        }
-        set
-        {
-            this.itemLegalField = value;
-        }
-    }
+    public GMLDatabaseItemItemTags ItemTags { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemTags ItemTags
-    {
-        get
-        {
-            return this.itemTagsField;
-        }
-        set
-        {
-            this.itemTagsField = value;
-        }
-    }
+    public GMLDatabaseItemItemRds ItemRds { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemRds ItemRds
-    {
-        get
-        {
-            return this.itemRdsField;
-        }
-        set
-        {
-            this.itemRdsField = value;
-        }
-    }
+    public GMLDatabaseItemItemMeta ItemMeta { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemMeta ItemMeta
-    {
-        get
-        {
-            return this.itemMetaField;
-        }
-        set
-        {
-            this.itemMetaField = value;
-        }
-    }
+    public GMLDatabaseItemItemMix ItemMix { get; set; }
 
     /// <remarks/>
-    public GMLDatabaseItemItemMix ItemMix
-    {
-        get
-        {
-            return this.itemMixField;
-        }
-        set
-        {
-            this.itemMixField = value;
-        }
-    }
+    public GMLDatabaseItemItemFiles ItemFiles { get; set; }
 
-    /// <remarks/>
-    public GMLDatabaseItemItemFiles ItemFiles
+    public override string ToString()
     {
-        get
-        {
-            return this.itemFilesField;
-        }
-        set
-        {
-            this.itemFilesField = value;
-        }
+        return $"{ItemInfo}";
     }
 }
 
@@ -571,185 +395,43 @@ public partial class GMLDatabaseItemCategoryInfo
 public partial class GMLDatabaseItemItemInfo
 {
 
-    private ushort itemIdField;
-
-    private uint itemDurationField;
-
-    private byte itemTypeField;
-
-    private string itemTypeAsTextField;
-
-    private ushort itemSubTypeField;
-
-    private string itemSubTypeAsTextField;
-
-    private byte itemProdStateField;
-
-    private string itemProdStateAsTextField;
-
-    private byte itemRecStateField;
-
-    private string itemRecStateAsTextField;
-
-    private string itemTitleField;
-
-    private string itemInterpretField;
+    /// <remarks/>
+    public ushort ItemId { get; set; }
 
     /// <remarks/>
-    public ushort ItemId
-    {
-        get
-        {
-            return this.itemIdField;
-        }
-        set
-        {
-            this.itemIdField = value;
-        }
-    }
+    public uint ItemDuration { get; set; }
 
     /// <remarks/>
-    public uint ItemDuration
-    {
-        get
-        {
-            return this.itemDurationField;
-        }
-        set
-        {
-            this.itemDurationField = value;
-        }
-    }
+    public byte ItemType { get; set; }
 
     /// <remarks/>
-    public byte ItemType
-    {
-        get
-        {
-            return this.itemTypeField;
-        }
-        set
-        {
-            this.itemTypeField = value;
-        }
-    }
+    public string ItemTypeAsText { get; set; }
 
     /// <remarks/>
-    public string ItemTypeAsText
-    {
-        get
-        {
-            return this.itemTypeAsTextField;
-        }
-        set
-        {
-            this.itemTypeAsTextField = value;
-        }
-    }
+    public ushort ItemSubType { get; set; }
 
     /// <remarks/>
-    public ushort ItemSubType
-    {
-        get
-        {
-            return this.itemSubTypeField;
-        }
-        set
-        {
-            this.itemSubTypeField = value;
-        }
-    }
+    public string ItemSubTypeAsText { get; set; }
 
     /// <remarks/>
-    public string ItemSubTypeAsText
-    {
-        get
-        {
-            return this.itemSubTypeAsTextField;
-        }
-        set
-        {
-            this.itemSubTypeAsTextField = value;
-        }
-    }
+    public byte ItemProdState { get; set; }
 
     /// <remarks/>
-    public byte ItemProdState
-    {
-        get
-        {
-            return this.itemProdStateField;
-        }
-        set
-        {
-            this.itemProdStateField = value;
-        }
-    }
+    public string ItemProdStateAsText { get; set; }
 
     /// <remarks/>
-    public string ItemProdStateAsText
-    {
-        get
-        {
-            return this.itemProdStateAsTextField;
-        }
-        set
-        {
-            this.itemProdStateAsTextField = value;
-        }
-    }
+    public byte ItemRecState { get; set; }
 
     /// <remarks/>
-    public byte ItemRecState
-    {
-        get
-        {
-            return this.itemRecStateField;
-        }
-        set
-        {
-            this.itemRecStateField = value;
-        }
-    }
+    public string ItemRecStateAsText { get; set; }
 
     /// <remarks/>
-    public string ItemRecStateAsText
-    {
-        get
-        {
-            return this.itemRecStateAsTextField;
-        }
-        set
-        {
-            this.itemRecStateAsTextField = value;
-        }
-    }
+    public string ItemTitle { get; set; }
 
     /// <remarks/>
-    public string ItemTitle
-    {
-        get
-        {
-            return this.itemTitleField;
-        }
-        set
-        {
-            this.itemTitleField = value;
-        }
-    }
+    public string ItemInterpret { get; set; }
 
-    /// <remarks/>
-    public string ItemInterpret
-    {
-        get
-        {
-            return this.itemInterpretField;
-        }
-        set
-        {
-            this.itemInterpretField = value;
-        }
-    }
+    public override string ToString() => $"{ItemInterpret} - {ItemTitle} ({ItemTypeAsText})";    
 }
 
 /// <remarks/>
@@ -2671,10 +2353,6 @@ public partial class GMLDatabaseItemItemMeta
 
     private object metaOriginItemIdField;
 
-    private object metaKeyWordsField;
-
-    private object metaLastWordsField;
-
     /// <remarks/>
     public object MetaOriginSiteName
     {
@@ -2702,30 +2380,10 @@ public partial class GMLDatabaseItemItemMeta
     }
 
     /// <remarks/>
-    public object MetaKeyWords
-    {
-        get
-        {
-            return this.metaKeyWordsField;
-        }
-        set
-        {
-            this.metaKeyWordsField = value;
-        }
-    }
+    public string MetaKeyWords { get; set; }
 
     /// <remarks/>
-    public object MetaLastWords
-    {
-        get
-        {
-            return this.metaLastWordsField;
-        }
-        set
-        {
-            this.metaLastWordsField = value;
-        }
-    }
+    public string MetaLastWords { get; set; }
 }
 
 /// <remarks/>
@@ -3080,18 +2738,8 @@ public partial class GMLDatabaseItemItemFiles
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
 public partial class GMLDatabaseItemItemFilesFileAudio
 {
-
-    private byte filePathIdField;
-
-    private string filePathField;
-
-    private string fileNameField;
-
-    private string fileAttrField;
-
-    private string fileAttrTextField;
-
-    private string fileCRCField;
+    // removed explicit backing field for FilePathId - use auto-property
+    public byte FilePathId { get; set; }
 
     private uint? fileSizeField;
 
@@ -3102,85 +2750,23 @@ public partial class GMLDatabaseItemItemFilesFileAudio
     private ulong fileTimeStampAccessedField;
 
     /// <remarks/>
-    public byte FilePathId
-    {
-        get
-        {
-            return this.filePathIdField;
-        }
-        set
-        {
-            this.filePathIdField = value;
-        }
-    }
+    public string FilePath { get; set; }
+
 
     /// <remarks/>
-    public string FilePath
-    {
-        get
-        {
-            return this.filePathField;
-        }
-        set
-        {
-            this.filePathField = value;
-        }
-    }
+    public string FileName { get; set; }
 
     /// <remarks/>
-    public string FileName
-    {
-        get
-        {
-            return this.fileNameField;
-        }
-        set
-        {
-            this.fileNameField = value;
-        }
-    }
+    public string FileAttr { get; set; }
 
     /// <remarks/>
-    public string FileAttr
-    {
-        get
-        {
-            return this.fileAttrField;
-        }
-        set
-        {
-            this.fileAttrField = value;
-        }
-    }
+    public string FileAttrText { get; set; }
 
     /// <remarks/>
-    public string FileAttrText
-    {
-        get
-        {
-            return this.fileAttrTextField;
-        }
-        set
-        {
-            this.fileAttrTextField = value;
-        }
-    }
+    public string FileCRC { get; set; }
 
     /// <remarks/>
-    public string FileCRC
-    {
-        get
-        {
-            return this.fileCRCField;
-        }
-        set
-        {
-            this.fileCRCField = value;
-        }
-    }
-
-    /// <remarks/>
-    public string FileSize 
+    public string FileSize
     {
         get
         {
@@ -3231,4 +2817,5 @@ public partial class GMLDatabaseItemItemFilesFileAudio
         }
     }
 }
+
 

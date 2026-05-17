@@ -14,35 +14,35 @@ void ConvertXmlToGmlModels()
     try
     {
         var xmlPath = "../../../data/20260515.GML.DbDump.xml";
-        
-        using (XmlReader reader = XmlReader.Create(xmlPath))
+
+        using XmlReader reader = XmlReader.Create(xmlPath);
+        XmlSerializer serializer = new(typeof(GML));
+
+        // Check if the root element can be deserialized
+        if (!serializer.CanDeserialize(reader))
         {
-            var serializer = new XmlSerializer(typeof(GML));
-            
-            // Check if the root element can be deserialized
-            if (serializer.CanDeserialize(reader))
-            {
-                var gmlModel = serializer.Deserialize(reader) as GML;
-                
-                if (gmlModel != null)
-                {
-                    Console.WriteLine($"Successfully loaded: {gmlModel.AppSpecificInfo?.Length ?? 0} items");
-                    
-                    // Process each database item
-                    if (gmlModel.AppSpecificInfo != null)
-                    {
-                        foreach (var item in gmlModel.AppSpecificInfo)
-                        {
-                            Console.WriteLine($"Processing item: {item}");
-                            // Add your processing logic here
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Console.WriteLine("XML structure does not match expected GML format");
-            }
+            Console.WriteLine("XML structure does not match expected GML format");
+            return;
+        }
+
+        if (serializer.Deserialize(reader) is not GML gmlModel)
+        {
+            Console.WriteLine("XML structure does not match expected GML format");
+            return;
+        }
+
+        Console.WriteLine($"Successfully loaded: {gmlModel.AppSpecificInfo?.Length ?? 0} items");
+
+        // Process each database item
+        if (gmlModel.AppSpecificInfo == null)
+        {
+            return;
+        }
+
+        foreach (var item in gmlModel.AppSpecificInfo)
+        {
+            Console.WriteLine($"Processing item: {item}");
+            // Add your processing logic here
         }
     }
     catch (XmlException xmlEx)
