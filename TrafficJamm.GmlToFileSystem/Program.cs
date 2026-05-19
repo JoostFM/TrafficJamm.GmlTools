@@ -6,6 +6,7 @@ using Serilog;
 using System.IO.Abstractions;
 using TrafficJamm.GmlToFileSystem;
 using TrafficJamm.GmlToFileSystem.Gml.Models;
+using TrafficJamm.GmlToFileSystem.Models;
 
 var host = Host.CreateDefaultBuilder(args)
     .ConfigureAppConfiguration((context, config) =>
@@ -18,14 +19,15 @@ var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
     {
         services.AddTransient<IFileSystem, FileSystem>();
-        services.AddGmlApiServices();
+        services.Configure<GmlToFileSystemSettings>(context.Configuration.GetSection("GmlToFileSystemSettings"));
+        services.AddGmlToFileSystemServices();
     })
     .UseSerilog((context, loggerConfig) =>
     {
         loggerConfig
             .MinimumLevel.Information()
             .WriteTo.Console()
-            .WriteTo.File("logs/gml-conversion-.txt", rollingInterval: RollingInterval.Day)
+            .WriteTo.File("../../logs/gml-conversion-.txt", rollingInterval: RollingInterval.Day)
             .Enrich.FromLogContext()
             .Enrich.WithProperty("Application", "TrafficJamm.GmlToFileSystem");
     })
@@ -38,6 +40,7 @@ try
     logger.LogInformation("Starting GML conversion process...");
 
     var gmlApi = host.Services.GetRequiredService<IGmlApi>();
+    var trackListApi = host.Services.GetRequiredService<ITrackListApi>();
 
     var request = new DbDumpRequest
     {
@@ -60,6 +63,12 @@ try
     {
         logger.LogError("Conversion failed. Message: {Message}", result.Message);
         Environment.Exit(1);
+    }
+
+    var copyResult = await trackListApi.TransferGmlFilesToFileSystem(result.Data);
+    if (copyResult.Success)
+    {
+        logger.LogInformation("GML files transferred successfully. Message: {Message}", copyResult.Message);
     }
 }
 catch (Exception ex)
