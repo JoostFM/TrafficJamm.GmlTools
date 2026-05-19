@@ -21,6 +21,8 @@ public class DbDumpFileService(IFileSystem fileSystem, ILogger<DbDumpFileService
         {
             try
             {
+                var reference = item.ItemInfo.ItemId.ToString("X8");
+
                 var trackInfo = new TrackInfoModel
                 {
                     Artist = item.ItemInfo.ItemInterpret,
@@ -34,7 +36,8 @@ public class DbDumpFileService(IFileSystem fileSystem, ILogger<DbDumpFileService
                     Cues = GetCues(item.ItemMix),
                     Metadata = new Dictionary<string, string> {
                         { "Ref", item.ItemReferences.RefReference },
-                        { "ItemId", item.ItemInfo.ItemId.ToString() }
+                        { "ItemId", item.ItemInfo.ItemId.ToString() },
+                        { "GmlFilename", reference + ".wav" }
                     }
                 };
 

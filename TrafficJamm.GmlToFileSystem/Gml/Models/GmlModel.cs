@@ -159,7 +159,7 @@ public partial class GMLDatabaseItemCategoryInfo
 public partial class GMLDatabaseItemItemInfo
 {
     /// <remarks/>
-    public ushort ItemId { get; set; }
+    public uint ItemId { get; set; }
 
     /// <remarks/>
     public uint ItemDuration { get; set; }
