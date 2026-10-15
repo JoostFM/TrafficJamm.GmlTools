@@ -85,7 +85,9 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test $env:Test_Project_Path --configuration $env:Configuration --verbosity normal
+      env:
+        Configuration: ${{ matrix.configuration }}
 
     # Restore the application to populate the obj folder with RuntimeIdentifiers
     - name: Restore the application
