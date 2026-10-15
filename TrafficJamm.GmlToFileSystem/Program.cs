@@ -79,5 +79,4 @@ catch (Exception ex)
 finally
 {
     logger.LogInformation("GML conversion process completed");
-    //await host.RunAsync();
 }
