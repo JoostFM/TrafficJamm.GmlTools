@@ -22,15 +22,8 @@ var host = Host.CreateDefaultBuilder(args)
         services.Configure<GmlToFileSystemSettings>(context.Configuration.GetSection("GmlToFileSystemSettings"));
         services.AddGmlToFileSystemServices();
     })
-    .UseSerilog((context, loggerConfig) =>
-    {
-        loggerConfig
-            .MinimumLevel.Information()
-            .WriteTo.Console()
-            .WriteTo.File("../../logs/gml-conversion-.txt", rollingInterval: RollingInterval.Day)
-            .Enrich.FromLogContext()
-            .Enrich.WithProperty("Application", "TrafficJamm.GmlToFileSystem");
-    })
+    .UseSerilog((context, loggerConfig) => loggerConfig
+        .ReadFrom.Configuration(context.Configuration))
     .Build();
 
 var logger = host.Services.GetRequiredService<ILogger<Program>>();
