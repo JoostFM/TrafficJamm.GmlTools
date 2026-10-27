@@ -4,5 +4,5 @@ namespace TrafficJamm.GmlToFileSystem.Services;
 
 public interface IDbDumpRequestService
 {
-    DbDumpRequest CreateDbDumpRequest(string? dumpFileName, string? sourceFilePath, string? targetFilePath);
+    DbDumpRequest CreateDbDumpRequest(string[] args);
 }

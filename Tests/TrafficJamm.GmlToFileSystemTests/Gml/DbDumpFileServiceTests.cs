@@ -197,9 +197,9 @@ public class DbDumpFileServiceTests
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
         _fileSystem.Directory.GetFiles(directoryPath, "*.xml").Returns(files);
-        _fileSystem.File.GetLastWriteTimeUtc(files[0]).Returns(new DateTime(2026, 1, 1));
-        _fileSystem.File.GetLastWriteTimeUtc(files[1]).Returns(new DateTime(2026, 1, 3));
-        _fileSystem.File.GetLastWriteTimeUtc(files[2]).Returns(new DateTime(2026, 1, 2));
+        _fileSystem.File.GetLastWriteTimeUtc(files[0]).Returns(new DateTime(2026, 1, 1,0,0,0, DateTimeKind.Utc));
+        _fileSystem.File.GetLastWriteTimeUtc(files[1]).Returns(new DateTime(2026, 1, 3,0,0,0, DateTimeKind.Utc));
+        _fileSystem.File.GetLastWriteTimeUtc(files[2]).Returns(new DateTime(2026, 1, 2,0,0,0, DateTimeKind.Utc));
 
         // Act
         var result = _service.GetDbDumpFilePath(request);

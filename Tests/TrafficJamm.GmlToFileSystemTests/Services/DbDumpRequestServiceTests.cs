@@ -16,7 +16,7 @@ public class DbDumpRequestServiceTests
     [Fact]
     public void CreateDbDumpRequest_WithNoOptions_UsesConfiguredValues()
     {
-        var result = _service.CreateDbDumpRequest(null, null, null);
+        var result = _service.CreateDbDumpRequest(["convert"]);
 
         Assert.Equal("/configured/dumps", result.DbDumpFileLocationPath);
         Assert.Empty(result.DbDumpFileName);
@@ -27,7 +27,7 @@ public class DbDumpRequestServiceTests
     [Fact]
     public void CreateDbDumpRequest_WithOptions_UsesProvidedValues()
     {
-        var result = _service.CreateDbDumpRequest("dump.xml", "/custom/source", "/custom/target");
+        var result = _service.CreateDbDumpRequest(["convert", "--filename", "dump.xml", "--source", "/custom/source", "--target", "/custom/target"]);
 
         Assert.Equal("dump.xml", result.DbDumpFileName);
         Assert.Equal("/custom/source", result.SourceFilePath);
@@ -39,7 +39,7 @@ public class DbDumpRequestServiceTests
     {
         const string dumpPath = "/custom/dumps/dump.xml";
 
-        var result = _service.CreateDbDumpRequest(dumpPath, null, null);
+        var result = _service.CreateDbDumpRequest(["convert", "--filename", dumpPath]);
 
         Assert.Equal(dumpPath, result.DbDumpFileName);
     }

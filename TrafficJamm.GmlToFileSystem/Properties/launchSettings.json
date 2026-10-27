@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TrafficJamm.GmlToFileSystem": {
+      "commandName": "Project",
+      "commandLineArgs": "convert"
+    }
+  }
+}
