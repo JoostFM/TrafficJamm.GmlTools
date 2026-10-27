@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using TrafficJamm.GmlToFileSystem.Gml.Models;
 using System.IO.Abstractions;
 using System.Text.Json;
 using TrafficJamm.GmlToFileSystem.Models;
@@ -7,17 +7,15 @@ using TrafficJamm.GmlToFileSystem.Services;
 
 namespace TrafficJamm.GmlToFileSystem;
 
-public class TrackListApi(IOptions<GmlToFileSystemSettings> options,
-    ILogger<TrackListApi> logger,
+public class TrackListApi(ILogger<TrackListApi> logger,
     ITrackListService trackListService,
     IFileSystem fileSystem) : ITrackListApi
 {
-    private readonly GmlToFileSystemSettings _settings = options.Value;
-    public async Task<Result> TransferGmlFilesToFileSystem(string gmlTrackListFile)
+    public async Task<Result> TransferGmlFilesToFileSystem(DbDumpRequest request, string gmlTrackListFile)
     {
         var content = await fileSystem.File.ReadAllTextAsync(gmlTrackListFile);
         var gmltrackListFilePath = JsonSerializer.Deserialize<List<TrackInfoModel>>(content, Constants.JsonOptions);
-        var fileSystemTrackListFile = trackListService.GetFileSystemTrackList(_settings.AudioTargetLocation);
+        var fileSystemTrackListFile = trackListService.GetFileSystemTrackList(request.TargetFilePath);
 
         var trackListTransferList = trackListService.GetTrackListTransferList(gmltrackListFilePath, fileSystemTrackListFile);
 
@@ -30,7 +28,7 @@ public class TrackListApi(IOptions<GmlToFileSystemSettings> options,
             }
 
             var gmlFilename = trackInfo.Metadata["GmlFilename"];
-            var source = Path.Combine(_settings.AudioSourceLocation, gmlFilename);
+            var source = Path.Combine(request.SourceFilePath, gmlFilename);
 
             if (!fileSystem.File.Exists(source))
             {
@@ -38,7 +36,7 @@ public class TrackListApi(IOptions<GmlToFileSystemSettings> options,
                 continue;
             }
 
-            var destination = Path.Combine(_settings.AudioTargetLocation, trackInfo.Reference);
+            var destination = Path.Combine(request.TargetFilePath, trackInfo.Reference);
             // Haal alleen de map uit het doelpad
             var destDirectory = Path.GetDirectoryName(destination);
 
@@ -54,7 +52,8 @@ public class TrackListApi(IOptions<GmlToFileSystemSettings> options,
 
         }
 
-        await fileSystem.File.WriteAllTextAsync(Path.Combine(_settings.AudioTargetLocation, Constants.FileSystemTrackListFile), JsonSerializer.Serialize(fileSystemTrackListFile, Constants.JsonOptions));
+        await fileSystem.File.WriteAllTextAsync(Path.Combine(request.TargetFilePath, Constants.FileSystemTrackListFile),
+            JsonSerializer.Serialize(fileSystemTrackListFile, Constants.JsonOptions));
         await Task.CompletedTask;
 
         return new Result

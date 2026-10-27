@@ -87,6 +87,12 @@ public class DbDumpFileService(IFileSystem fileSystem, ILogger<DbDumpFileService
     public string GetDbDumpFilePath(DbDumpRequest request)
     {
         ArgumentNullException.ThrowIfNull(request);
+
+        if (!string.IsNullOrWhiteSpace(request.DbDumpFileName) && Path.IsPathRooted(request.DbDumpFileName))
+        {
+            return request.DbDumpFileName;
+        }
+
         if (!fileSystem.Directory.Exists(request.DbDumpFileLocationPath))
         {
             throw new DirectoryNotFoundException($"The provided directory path '{request.DbDumpFileLocationPath}' does not exist.");
@@ -99,7 +105,10 @@ public class DbDumpFileService(IFileSystem fileSystem, ILogger<DbDumpFileService
             {
                 throw new FileNotFoundException($"No XML files found in the directory '{request.DbDumpFileLocationPath}'.");
             }
-            return dbDumpFiles[0];
+
+            return dbDumpFiles
+                .OrderByDescending(file => fileSystem.File.GetLastWriteTimeUtc(file))
+                .First();
         }
 
         return Path.Combine(request.DbDumpFileLocationPath, request.DbDumpFileName);

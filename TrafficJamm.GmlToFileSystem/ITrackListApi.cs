@@ -1,8 +1,9 @@
-﻿using TrafficJamm.GmlToFileSystem.Models;
+﻿using TrafficJamm.GmlToFileSystem.Gml.Models;
+using TrafficJamm.GmlToFileSystem.Models;
 
 namespace TrafficJamm.GmlToFileSystem;
 
 public interface ITrackListApi
 {
-    Task<Result> TransferGmlFilesToFileSystem(string gmlTrackListFile);
+    Task<Result> TransferGmlFilesToFileSystem(DbDumpRequest request, string gmlTrackListFile);
 }
