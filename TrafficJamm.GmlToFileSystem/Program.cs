@@ -4,6 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using System.IO.Abstractions;
+using System.Reflection;
 using TrafficJamm.GmlToFileSystem;
 using TrafficJamm.GmlToFileSystem.Models;
 using TrafficJamm.GmlToFileSystem.Services;
@@ -31,14 +32,15 @@ var dbDumpRequestService = host.Services.GetRequiredService<IDbDumpRequestServic
 
 try
 {
-    logger.LogInformation("Starting GML conversion process...");
+    var version = Assembly.GetExecutingAssembly().GetName().Version;
+    logger.LogInformation("Starting GML conversion process... Version: {Version}", version);
 
     var gmlApi = host.Services.GetRequiredService<IGmlApi>();
     var trackListApi = host.Services.GetRequiredService<ITrackListApi>();
     var request = dbDumpRequestService.CreateDbDumpRequest(args);
 
-    logger.LogInformation("Processing XML dump from: {Path}", request.DbDumpFileLocationPath);
-    logger.LogInformation("Target output directory: {Target}", request.TargetFilePath);
+    logger.LogInformation("Processing XML dump from: {Path}\nTarget output directory: {Target}", request.DbDumpFileLocationPath, request.TargetFilePath);
+
 
     var result = await gmlApi.CreateTrackListFromXmlDbDumpGmlAsync(request);
 

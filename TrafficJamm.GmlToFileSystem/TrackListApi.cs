@@ -45,10 +45,17 @@ public class TrackListApi(ILogger<TrackListApi> logger,
             {
                 Directory.CreateDirectory(destDirectory);
             }
+            if (!fileSystem.File.Exists(destination))
+            {
+                fileSystem.File.Copy(source, destination, true);
+                logger.LogInformation("Copied {GmlFilename} to {Target}", gmlFilename, destination);
+            }
+            else
+            {
+                logger.LogWarning("Already exists, skipping {GmlFilename} to '{Reference}' ", gmlFilename, trackInfo.Reference);
+            }
 
-            fileSystem.File.Copy(source, destination, true);
             fileSystemTrackListFile.Add(trackInfo);
-            logger.LogInformation("Copied {GmlFilename} to {Target}", gmlFilename, destination);
 
         }
 
