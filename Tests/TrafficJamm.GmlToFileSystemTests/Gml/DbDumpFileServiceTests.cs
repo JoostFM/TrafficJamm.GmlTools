@@ -43,7 +43,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = "/non/existent/path",
             DbDumpFileName = "",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(request.DbDumpFileLocationPath).Returns(false);
@@ -62,7 +63,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = "/some/path",
             DbDumpFileName = "",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(request.DbDumpFileLocationPath)
@@ -88,7 +90,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = fileName,
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -108,7 +111,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = "/data/dumps",
             DbDumpFileName = "specific.xml",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(request.DbDumpFileLocationPath).Returns(true);
@@ -132,7 +136,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = fileName,
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -161,7 +166,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = "",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -175,7 +181,7 @@ public class DbDumpFileServiceTests
     }
 
     [Fact]
-    public void GetDbDumpFilePath_WithNoFileName_ReturnsFirstXmlFile()
+    public void GetDbDumpFilePath_WithNoFileName_ReturnsMostRecentXmlFile()
     {
         // Arrange
         var directoryPath = "/data/dumps";
@@ -185,17 +191,39 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = "",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
         _fileSystem.Directory.GetFiles(directoryPath, "*.xml").Returns(files);
+        _fileSystem.File.GetLastWriteTimeUtc(files[0]).Returns(new DateTime(2026, 1, 1,0,0,0, DateTimeKind.Utc));
+        _fileSystem.File.GetLastWriteTimeUtc(files[1]).Returns(new DateTime(2026, 1, 3,0,0,0, DateTimeKind.Utc));
+        _fileSystem.File.GetLastWriteTimeUtc(files[2]).Returns(new DateTime(2026, 1, 2,0,0,0, DateTimeKind.Utc));
 
         // Act
         var result = _service.GetDbDumpFilePath(request);
 
         // Assert
-        Assert.Equal(files[0], result);
+        Assert.Equal(files[1], result);
+    }
+
+    [Fact]
+    public void GetDbDumpFilePath_WithFullFileName_ReturnsFullFileName()
+    {
+        const string dumpFilePath = "/other/dumps/database.xml";
+        var request = new DbDumpRequest
+        {
+            DbDumpFileLocationPath = "/configured/dumps",
+            DbDumpFileName = dumpFilePath,
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
+        };
+
+        var result = _service.GetDbDumpFilePath(request);
+
+        Assert.Equal(dumpFilePath, result);
+        _fileSystem.Directory.DidNotReceive().Exists(request.DbDumpFileLocationPath);
     }
 
     [Fact]
@@ -208,7 +236,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = "",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -231,7 +260,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = null!,
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -260,7 +290,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = "",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -282,7 +313,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = "file.xml",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -305,7 +337,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = string.Empty,
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);
@@ -328,7 +361,8 @@ public class DbDumpFileServiceTests
         {
             DbDumpFileLocationPath = directoryPath,
             DbDumpFileName = "",
-            TargetFilePath = "/target"
+            TargetFilePath = "/target",
+            SourceFilePath = "/source"
         };
 
         _fileSystem.Directory.Exists(directoryPath).Returns(true);

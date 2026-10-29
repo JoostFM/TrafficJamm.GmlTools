@@ -4,9 +4,10 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using System.IO.Abstractions;
+using System.Reflection;
 using TrafficJamm.GmlToFileSystem;
-using TrafficJamm.GmlToFileSystem.Gml.Models;
 using TrafficJamm.GmlToFileSystem.Models;
+using TrafficJamm.GmlToFileSystem.Services;
 
 var host = Host.CreateDefaultBuilder(args)
     .ConfigureAppConfiguration((context, config) =>
@@ -22,50 +23,37 @@ var host = Host.CreateDefaultBuilder(args)
         services.Configure<GmlToFileSystemSettings>(context.Configuration.GetSection("GmlToFileSystemSettings"));
         services.AddGmlToFileSystemServices();
     })
-    .UseSerilog((context, loggerConfig) =>
-    {
-        loggerConfig
-            .MinimumLevel.Information()
-            .WriteTo.Console()
-            .WriteTo.File("../../logs/gml-conversion-.txt", rollingInterval: RollingInterval.Day)
-            .Enrich.FromLogContext()
-            .Enrich.WithProperty("Application", "TrafficJamm.GmlToFileSystem");
-    })
+    .UseSerilog((context, loggerConfig) => loggerConfig
+        .ReadFrom.Configuration(context.Configuration))
     .Build();
 
 var logger = host.Services.GetRequiredService<ILogger<Program>>();
+var dbDumpRequestService = host.Services.GetRequiredService<IDbDumpRequestService>();
 
 try
 {
-    logger.LogInformation("Starting GML conversion process...");
+    var version = Assembly.GetExecutingAssembly().GetName().Version;
+    logger.LogInformation("Starting GML conversion process... Version: {Version}", version);
 
     var gmlApi = host.Services.GetRequiredService<IGmlApi>();
     var trackListApi = host.Services.GetRequiredService<ITrackListApi>();
+    var request = dbDumpRequestService.CreateDbDumpRequest(args);
 
-    var request = new DbDumpRequest
-    {
-        DbDumpFileLocationPath = @"D:\JammFM\GML\Dump\Xml",
-        DbDumpFileName = "20260515.GML.DbDump.xml",
-        TargetFilePath = @"D:\JammFM\GML\GmlTrackIndex"
-    };
+    logger.LogInformation("Processing XML dump from: {Path}\nTarget output directory: {Target}", request.DbDumpFileLocationPath, request.TargetFilePath);
 
-    logger.LogInformation("Processing XML dump from: {Path}", request.DbDumpFileLocationPath);
-    logger.LogInformation("Target output directory: {Target}", request.TargetFilePath);
 
     var result = await gmlApi.CreateTrackListFromXmlDbDumpGmlAsync(request);
 
-    if (result.Success)
-    {
-        logger.LogInformation("Conversion completed successfully. Output: {Output}", result.Data);
-        logger.LogInformation("Message: {Message}", result.Message);
-    }
-    else
+    if (!result.Success)
     {
         logger.LogError("Conversion failed. Message: {Message}", result.Message);
-        Environment.Exit(1);
+        return 1;
     }
 
-    var copyResult = await trackListApi.TransferGmlFilesToFileSystem(result.Data);
+    logger.LogInformation("Conversion completed successfully. Output: {Output}", result.Data);
+    logger.LogInformation("Message: {Message}", result.Message);
+
+    var copyResult = await trackListApi.TransferGmlFilesToFileSystem(request, result.Data);
     if (copyResult.Success)
     {
         logger.LogInformation("GML files transferred successfully. Message: {Message}", copyResult.Message);
@@ -74,9 +62,11 @@ try
 catch (Exception ex)
 {
     logger.LogError(ex, "An unexpected error occurred during GML conversion");
-    Environment.Exit(1);
+    return 1;
 }
 finally
 {
     logger.LogInformation("GML conversion process completed");
 }
+
+return 0;

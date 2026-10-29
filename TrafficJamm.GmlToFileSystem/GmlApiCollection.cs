@@ -10,7 +10,7 @@ public static class GmlApiCollection
     {
         services.AddTransient<IGmlApi, GmlApi>();
         services.AddTransient<ITrackListApi, TrackListApi>();
-
+        services.AddTransient<IDbDumpRequestService, DbDumpRequestService>();
         services.AddGmlServices();
         services.AddTrackListServices();
 
