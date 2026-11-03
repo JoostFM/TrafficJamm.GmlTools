@@ -84,7 +84,7 @@ jobs:
 
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test $env:Test_Project_Path --configuration $env:Configuration --verbosity normal --collect:"XPlat Code Coverage"
+      run: dotnet test $env:Test_Project_Path --configuration $env:Configuration --verbosity normal
       env:
         Configuration: ${{ matrix.configuration }}
 
