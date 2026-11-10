@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GmlToFileSystem.Library\GmlToFileSystem.Library.csproj" />
+    <ProjectReference Include="..\..\GmlToFileSystem.Library\GmlToFileSystem.Library.csproj" />
   </ItemGroup>
 
   <ItemGroup>

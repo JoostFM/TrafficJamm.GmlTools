@@ -1,0 +1,2070 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<GML>
+
+	<FileInfo>
+		<Copyright>Copyright &#169;2021 - Audisi B.V. - Almere [The Netherlands]</Copyright>
+		<TimeStamp>20261109160201915</TimeStamp>
+	</FileInfo>
+
+	<AppInfo>
+		<AppName>ONE-Server</AppName>
+		<AppBuild>Build 20.12.522.132</AppBuild>
+		<AppVersion>2012</AppVersion>
+		<AppRelease>20210412</AppRelease>
+	</AppInfo>
+
+	<AppSpecificInfo>
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>35174</ItemId>
+				<ItemDuration>222226</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>3111</ItemSubType>
+				<ItemSubTypeAsText>Music</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>Ready Or Not</ItemTitle>
+				<ItemInterpret>Fugees</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20201211103517833</TimeStampCreated>
+				<TimeStampModified>20230224184225750</TimeStampModified>
+				<TimeStampRecorded>20230224184138152</TimeStampRecorded>
+				<TimeStampImported>20230224184138152</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20230224000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008966</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>Wonderful</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>227004</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>1683</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>223371</MixPosEnd>
+				<MixPosNext>222226</MixPosNext>
+				<MixPosIntro>10519</MixPosIntro>
+				<MixPosOutro>223371</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008966.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>40043508</FileSize>
+					<FileTimeStampCreated>20230224184225008</FileTimeStampCreated>
+					<FileTimeStampModified>20230224184137451</FileTimeStampModified>
+					<FileTimeStampAccessed>20261106090428757</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>35681</ItemId>
+				<ItemDuration>220760</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>3111</ItemSubType>
+				<ItemSubTypeAsText>Music</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>I left my wallet in El Segundo</ItemTitle>
+				<ItemInterpret>A Tribe Called Quest</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20230812170116836</TimeStampCreated>
+				<TimeStampModified>20240329192721632</TimeStampModified>
+				<TimeStampRecorded>20240329192523590</TimeStampRecorded>
+				<TimeStampImported>20240329192523590</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>19800101000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008B61</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3 />
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>224160</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>1236</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>224160</MixPosEnd>
+				<MixPosNext>220760</MixPosNext>
+				<MixPosIntro>5964</MixPosIntro>
+				<MixPosOutro>224160</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008B61.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>39541868</FileSize>
+					<FileTimeStampCreated>20240329192621491</FileTimeStampCreated>
+					<FileTimeStampModified>20240329192523365</FileTimeStampModified>
+					<FileTimeStampAccessed>20261106204231036</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>36087</ItemId>
+				<ItemDuration>284896</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>3111</ItemSubType>
+				<ItemSubTypeAsText>Music</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>Inna City Mamma</ItemTitle>
+				<ItemInterpret>Neneh Cherry</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20240321115348770</TimeStampCreated>
+				<TimeStampModified>20260109160005417</TimeStampModified>
+				<TimeStampRecorded>20260109155917328</TimeStampRecorded>
+				<TimeStampImported>20260109155917328</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20240321000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008CF7</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>TO</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>291027</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>2004</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>288220</MixPosEnd>
+				<MixPosNext>284896</MixPosNext>
+				<MixPosIntro>0</MixPosIntro>
+				<MixPosOutro>288220</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008CF7.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>51337148</FileSize>
+					<FileTimeStampCreated>20260109160004906</FileTimeStampCreated>
+					<FileTimeStampModified>20260109155917081</FileTimeStampModified>
+					<FileTimeStampAccessed>20260923181845760</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>36141</ItemId>
+				<ItemDuration>215516</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>3111</ItemSubType>
+				<ItemSubTypeAsText>Music</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>Gotta be... movin&#39;on up</ItemTitle>
+				<ItemInterpret>P.M. Dawn ft. Ky-Mani</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20240726182155384</TimeStampCreated>
+				<TimeStampModified>20240726185333075</TimeStampModified>
+				<TimeStampRecorded>20240726182159049</TimeStampRecorded>
+				<TimeStampImported>20240726182159049</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20240726000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008D2D</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>P.M. Dawn ft. Ky-Mani</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>218240</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>602</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>218240</MixPosEnd>
+				<MixPosNext>215516</MixPosNext>
+				<MixPosIntro>3739</MixPosIntro>
+				<MixPosOutro>218240</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008D2D.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>38497580</FileSize>
+					<FileTimeStampCreated>20240726172157134</FileTimeStampCreated>
+					<FileTimeStampModified>20240726172156154</FileTimeStampModified>
+					<FileTimeStampAccessed>20261104184154824</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>36142</ItemId>
+				<ItemDuration>199107</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>0</ItemSubType>
+				<ItemSubTypeAsText>[Unspecified]</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>He got game</ItemTitle>
+				<ItemInterpret>Public Enemy</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20240726182208105</TimeStampCreated>
+				<TimeStampModified>20240726182211317</TimeStampModified>
+				<TimeStampRecorded>20240726182211218</TimeStampRecorded>
+				<TimeStampImported>20240726182211218</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20240726000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008D2E</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>Public Enemy</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>199107</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>0</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>199107</MixPosEnd>
+				<MixPosNext>199107</MixPosNext>
+				<MixPosIntro>0</MixPosIntro>
+				<MixPosOutro>199107</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008D2E.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>35122460</FileSize>
+					<FileTimeStampCreated>20240726172209542</FileTimeStampCreated>
+					<FileTimeStampModified>20240726172208791</FileTimeStampModified>
+					<FileTimeStampAccessed>20261104184155724</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>36143</ItemId>
+				<ItemDuration>239347</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>0</ItemSubType>
+				<ItemSubTypeAsText>[Unspecified]</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>Another one bites the dust</ItemTitle>
+				<ItemInterpret>Queen and Whyclef Jean ft. Pras &#38; Free</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20240726182221207</TimeStampCreated>
+				<TimeStampModified>20240726182225285</TimeStampModified>
+				<TimeStampRecorded>20240726182225261</TimeStampRecorded>
+				<TimeStampImported>20240726182225261</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20240726000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008D2F</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>Queen and Whyclef Jean ft. Pras &#38; Free</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>239347</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>0</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>239347</MixPosEnd>
+				<MixPosNext>239347</MixPosNext>
+				<MixPosIntro>0</MixPosIntro>
+				<MixPosOutro>239347</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008D2F.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>42220796</FileSize>
+					<FileTimeStampCreated>20240726172223119</FileTimeStampCreated>
+					<FileTimeStampModified>20240726172222049</FileTimeStampModified>
+					<FileTimeStampAccessed>20261106113705380</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>36145</ItemId>
+				<ItemDuration>310560</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>0</ItemSubType>
+				<ItemSubTypeAsText>[Unspecified]</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>I&#39;ll be missing you</ItemTitle>
+				<ItemInterpret>Puff Daddy &#38; Faith Evans ft. 112</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20240726182600926</TimeStampCreated>
+				<TimeStampModified>20240726182606109</TimeStampModified>
+				<TimeStampRecorded>20240726182605982</TimeStampRecorded>
+				<TimeStampImported>20240726182605982</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20240726000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008D31</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>Puff Daddy &#38; Faith Evans ft. 112</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>310560</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>0</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>310560</MixPosEnd>
+				<MixPosNext>310560</MixPosNext>
+				<MixPosIntro>0</MixPosIntro>
+				<MixPosOutro>310560</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008D31.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>54782828</FileSize>
+					<FileTimeStampCreated>20240726172603170</FileTimeStampCreated>
+					<FileTimeStampModified>20240726172601998</FileTimeStampModified>
+					<FileTimeStampAccessed>20260923181844600</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>36146</ItemId>
+				<ItemDuration>238707</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>0</ItemSubType>
+				<ItemSubTypeAsText>[Unspecified]</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>I never told you</ItemTitle>
+				<ItemInterpret>Flip Da Scrip</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20240726182616329</TimeStampCreated>
+				<TimeStampModified>20240726182620465</TimeStampModified>
+				<TimeStampRecorded>20240726182620428</TimeStampRecorded>
+				<TimeStampImported>20240726182620428</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20240726000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008D32</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>Flip Da Scrip</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>238707</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>0</MixTimeFadeOut>
+				<MixPosBegin>0</MixPosBegin>
+				<MixPosEnd>238707</MixPosEnd>
+				<MixPosNext>238707</MixPosNext>
+				<MixPosIntro>0</MixPosIntro>
+				<MixPosOutro>238707</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008D32.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>42107900</FileSize>
+					<FileTimeStampCreated>20240726172618249</FileTimeStampCreated>
+					<FileTimeStampModified>20240726172617153</FileTimeStampModified>
+					<FileTimeStampAccessed>20260923181838209</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+
+		<DatabaseItem>
+
+			<CategoryInfo>
+				<CategoryId>132</CategoryId>
+				<CategoryParentId>10</CategoryParentId>
+				<CategoryType>10</CategoryType>
+				<CategoryTypeAsText>Audio</CategoryTypeAsText>
+				<CategoryCode>NEW</CategoryCode>
+				<CategoryName>DT Rap</CategoryName>
+				<CategoryNamePath>\!\DT Rap</CategoryNamePath>
+				<CategoryDescription />
+				<CategoryRecMaxDuration>0</CategoryRecMaxDuration>
+				<CategoryPathId>1</CategoryPathId>
+				<CategoryPath>\\JAMM-STU-SRV02\GmlItems\</CategoryPath>
+				<CategoryColor>00000000</CategoryColor>
+				<FormatDefaultGenre>255</FormatDefaultGenre>
+				<FormatSepaMinArtist>120</FormatSepaMinArtist>
+				<FormatSepaMinTitle>120</FormatSepaMinTitle>
+			</CategoryInfo>
+
+			<ItemInfo>
+				<ItemId>36155</ItemId>
+				<ItemDuration>176628</ItemDuration>
+				<ItemType>10</ItemType>
+				<ItemTypeAsText>Audio</ItemTypeAsText>
+				<ItemSubType>3111</ItemSubType>
+				<ItemSubTypeAsText>Music</ItemSubTypeAsText>
+				<ItemProdState>4</ItemProdState>
+				<ItemProdStateAsText>Ready</ItemProdStateAsText>
+				<ItemRecState>2</ItemRecState>
+				<ItemRecStateAsText>On-line</ItemRecStateAsText>
+				<ItemTitle>I&#39;ll Be</ItemTitle>
+				<ItemInterpret>Foxy Brown feat. Jay-Z</ItemInterpret>
+			</ItemInfo>
+
+			<ItemDates>
+				<TimeStampCreated>20240802181724572</TimeStampCreated>
+				<TimeStampModified>20240816141225031</TimeStampModified>
+				<TimeStampRecorded>20240802181727671</TimeStampRecorded>
+				<TimeStampImported>20240802181727671</TimeStampImported>
+				<TimeStampExported>19691231000000000</TimeStampExported>
+				<TimeStampSynced>19691231000000000</TimeStampSynced>
+				<TimeStampPlanned>19691231000000000</TimeStampPlanned>
+				<TimeStampUsed>19691231000000000</TimeStampUsed>
+				<TimeStampTrashed>19691231000000000</TimeStampTrashed>
+				<TimeStampRangeStart>20240802000000000</TimeStampRangeStart>
+				<TimeStampRangeEnd>20991231000000000</TimeStampRangeEnd>
+				<TimeStampRangeWarn>20991231000000000</TimeStampRangeWarn>
+				<TimeStampRangeExpiry>20991231000000000</TimeStampRangeExpiry>
+			</ItemDates>
+
+			<ItemReferences>
+				<RefReference>REF00008D3B</RefReference>
+				<RefItemCode />
+				<RefMosObjectId />
+			</ItemReferences>
+
+			<ItemTexts>
+				<TextComment1 />
+				<TextComment2 />
+				<TextComment3>Foxy Brown feat. Jay-Z</TextComment3>
+				<TextComment4 />
+				<TextSetup />
+			</ItemTexts>
+
+			<ItemLegal>
+				<LegalAlbumId>0</LegalAlbumId>
+				<LegalTrackId>0</LegalTrackId>
+				<LegalArtistIds />
+				<LegalBandIds />
+				<LegalCountryIds />
+				<LegalLabel />
+				<LegalVersion />
+				<LegalAuthor />
+				<LegalClient />
+				<LegalSongwriter />
+				<LegalComposer />
+				<LegalProducer />
+				<LegalTechnician />
+				<LegalRemixer />
+				<LegalOrchestrator />
+				<LegalOrchestra />
+				<LegalConductor />
+				<LegalChoir />
+				<LegalChoirConductor />
+				<LegalPart />
+				<LegalMovement />
+				<LegalCodeClass />
+				<LegalCodeISRC />
+			</ItemLegal>
+
+			<ItemTags>
+				<TagReleaseDate>20000101000000000</TagReleaseDate>
+				<TagChartDate>18991230000000000</TagChartDate>
+				<TagChartType>0</TagChartType>
+				<TagChartRanking>0</TagChartRanking>
+				<TagChartCountry>0</TagChartCountry>
+				<TagMediaType>0</TagMediaType>
+				<TagMediaDiscNr>1</TagMediaDiscNr>
+				<TagMediaTrackNr>1</TagMediaTrackNr>
+				<TagMediaInventoryId />
+				<TagFormatFlags1>0</TagFormatFlags1>
+				<TagFormatFlags2>0</TagFormatFlags2>
+				<TagFormatFlags3>0</TagFormatFlags3>
+				<TagFormatFlags4>0</TagFormatFlags4>
+				<TagFormatParams1>0</TagFormatParams1>
+				<TagFormatParams2>0</TagFormatParams2>
+				<TagFormatParams3>0</TagFormatParams3>
+				<TagFormatParams4>0</TagFormatParams4>
+				<TagFormatParams5>0</TagFormatParams5>
+				<TagFormatParams6>0</TagFormatParams6>
+				<TagFormatParams7>0</TagFormatParams7>
+				<TagFormatParams8>0</TagFormatParams8>
+				<TagFormatGender>0</TagFormatGender>
+				<TagFormatPartDay>0</TagFormatPartDay>
+				<TagFormatPartWeek>0</TagFormatPartWeek>
+				<TagFormatPartYear>0</TagFormatPartYear>
+				<TagMusicCode />
+				<TagMusicGenreMain>255</TagMusicGenreMain>
+				<TagMusicGenreSub1>255</TagMusicGenreSub1>
+				<TagMusicGenreSub2>255</TagMusicGenreSub2>
+				<TagMusicGenreSub3>255</TagMusicGenreSub3>
+				<TagMusicTypeBegin>0</TagMusicTypeBegin>
+				<TagMusicTypeEnd>0</TagMusicTypeEnd>
+				<TagMusicKeyBegin>0</TagMusicKeyBegin>
+				<TagMusicKeyMid>0</TagMusicKeyMid>
+				<TagMusicKeyEnd>0</TagMusicKeyEnd>
+				<TagMusicBpmBegin>120</TagMusicBpmBegin>
+				<TagMusicBpmMid>120</TagMusicBpmMid>
+				<TagMusicBpmEnd>120</TagMusicBpmEnd>
+				<TagLanguageISO>ENG</TagLanguageISO>
+				<TagLanguageText>English</TagLanguageText>
+				<TagPerformerType>Band</TagPerformerType>
+				<TagMoodKeywords>Medium</TagMoodKeywords>
+				<TagGenreText>Pop</TagGenreText>
+				<TagPopularimeterRating>0</TagPopularimeterRating>
+				<TagPopularimeterCounter>0</TagPopularimeterCounter>
+				<TagUserFlags>0</TagUserFlags>
+			</ItemTags>
+
+			<ItemRds>
+				<RdsTextPS1 />
+				<RdsTextPS2 />
+				<RdsTextPS3 />
+				<RdsTextPS4 />
+				<RdsTextPS5 />
+				<RdsTextPS6 />
+				<RdsTextPS7 />
+				<RdsTextPS8 />
+				<RdsTimePS1>5</RdsTimePS1>
+				<RdsTimePS2>5</RdsTimePS2>
+				<RdsTimePS3>5</RdsTimePS3>
+				<RdsTimePS4>5</RdsTimePS4>
+				<RdsTimePS5>5</RdsTimePS5>
+				<RdsTimePS6>5</RdsTimePS6>
+				<RdsTimePS7>5</RdsTimePS7>
+				<RdsTimePS8>5</RdsTimePS8>
+				<RdsAlignPS1>Left</RdsAlignPS1>
+				<RdsAlignPS2>Left</RdsAlignPS2>
+				<RdsAlignPS3>Left</RdsAlignPS3>
+				<RdsAlignPS4>Left</RdsAlignPS4>
+				<RdsAlignPS5>Left</RdsAlignPS5>
+				<RdsAlignPS6>Left</RdsAlignPS6>
+				<RdsAlignPS7>Left</RdsAlignPS7>
+				<RdsAlignPS8>Left</RdsAlignPS8>
+				<RdsTextRT1 />
+				<RdsTextRT2 />
+				<RdsTimeRT1>60</RdsTimeRT1>
+				<RdsTimeRT2>60</RdsTimeRT2>
+				<RdsAlignRT1>Left</RdsAlignRT1>
+				<RdsAlignRT2>Left</RdsAlignRT2>
+				<RdsCodePTY>2</RdsCodePTY>
+				<RdsForcePTY>0</RdsForcePTY>
+				<RdsCodeTATP>2</RdsCodeTATP>
+				<RdsForceTATP>0</RdsForceTATP>
+			</ItemRds>
+
+			<ItemMeta>
+				<MetaOriginSiteName />
+				<MetaOriginItemId />
+				<MetaKeyWords />
+				<MetaLastWords />
+			</ItemMeta>
+
+			<ItemMix>
+				<LvlAdjLeft>0</LvlAdjLeft>
+				<LvlAdjRight>0</LvlAdjRight>
+				<MixTimeTotal>184027</MixTimeTotal>
+				<MixTimeFadeIn>0</MixTimeFadeIn>
+				<MixTimeFadeOut>1268</MixTimeFadeOut>
+				<MixPosBegin>301</MixPosBegin>
+				<MixPosEnd>180224</MixPosEnd>
+				<MixPosNext>176929</MixPosNext>
+				<MixPosIntro>13174</MixPosIntro>
+				<MixPosOutro>180224</MixPosOutro>
+				<HookPosIn>2147483647</HookPosIn>
+				<HookPosOut>2147483647</HookPosOut>
+				<HookPosNext>2147483647</HookPosNext>
+				<HotCuePosA>2147483647</HotCuePosA>
+				<HotCuePosB>2147483647</HotCuePosB>
+				<HotCuePosC>2147483647</HotCuePosC>
+				<HotCuePosD>2147483647</HotCuePosD>
+				<TriggerPos1>2147483647</TriggerPos1>
+				<TriggerPos2>2147483647</TriggerPos2>
+				<TriggerPos3>2147483647</TriggerPos3>
+				<TriggerPos4>2147483647</TriggerPos4>
+			</ItemMix>
+
+			<ItemFiles>
+
+				<FileAudio>
+					<FilePathId>1</FilePathId>
+					<FilePath>\\JAMM-STU-SRV02\GmlItems\</FilePath>
+					<FileName>00008D3B.wav</FileName>
+					<FileAttr>32</FileAttr>
+					<FileAttrText>Archive</FileAttrText>
+					<FileCRC />
+					<FileSize>32462348</FileSize>
+					<FileTimeStampCreated>20240802171726008</FileTimeStampCreated>
+					<FileTimeStampModified>20240802171725187</FileTimeStampModified>
+					<FileTimeStampAccessed>20260923181842793</FileTimeStampAccessed>
+				</FileAudio>
+
+
+			</ItemFiles>
+
+		</DatabaseItem>
+	</AppSpecificInfo>
+
+</GML>
