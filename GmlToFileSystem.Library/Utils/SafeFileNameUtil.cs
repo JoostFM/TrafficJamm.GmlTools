@@ -1,7 +1,7 @@
 ﻿using System.Net;
 using System.Text;
 
-namespace TrafficJamm.GmlToFileSystem.Utils;
+namespace GmlToFileSystem.Library.Utils;
 
 internal static class SafeFileNameUtil
 {

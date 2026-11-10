@@ -1,4 +1,5 @@
-﻿using TrafficJamm.GmlToFileSystem.Gml;
+﻿using GmlToFileSystem.Library.Models;
+using TrafficJamm.GmlToFileSystem.Gml;
 using TrafficJamm.GmlToFileSystem.Gml.Models;
 using TrafficJamm.GmlToFileSystem.Models;
 
@@ -8,20 +9,27 @@ public class GmlApi(IDbDumpFileService dbDumpFileService) : IGmlApi
 {
     public async Task<Result<string>> CreateTrackListFromXmlDbDumpGmlAsync(DbDumpRequest request)
     {
-        var dumpFilePath = dbDumpFileService.GetDbDumpFilePath(request);
-        var gmlItems = dbDumpFileService.GetGmlItemsFromDbDumpFile(dumpFilePath);
-        var gmlAudioItems = dbDumpFileService.FilterAudioItems(gmlItems);
-        var trackList = dbDumpFileService.ConvertToTrackInfoList(gmlAudioItems);
+        var trackList = GetTrackInfoList(request);
 
         var exportToFile = dbDumpFileService.ExportToGmlTrackIndex(trackList);
-        
+
         var result = new Result<string>
         {
             Success = true,
             Message = $"Generated {exportToFile}",
             Data = exportToFile
         };
+
         await Task.CompletedTask;
         return result;
+    }
+
+    private List<TrackInfoModel> GetTrackInfoList(DbDumpRequest request)
+    {
+        var dumpFilePath = dbDumpFileService.GetDbDumpFilePath(request);
+        var gmlItems = dbDumpFileService.GetGmlItemsFromDbDumpFile(dumpFilePath);
+        var gmlAudioItems = dbDumpFileService.FilterAudioItems(gmlItems);
+        var trackList = dbDumpFileService.ConvertToTrackInfoList(gmlAudioItems);
+        return trackList;
     }
 }

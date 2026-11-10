@@ -1,11 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using GmlToFileSystem.Library.Mappers;
+using GmlToFileSystem.Library.Models;
+using Microsoft.Extensions.Logging;
 using System.IO.Abstractions;
 using System.Text.Json;
 using System.Xml;
 using System.Xml.Serialization;
-using TrafficJamm.GmlToFileSystem.Gml.Helpers;
 using TrafficJamm.GmlToFileSystem.Gml.Models;
-using TrafficJamm.GmlToFileSystem.Models;
 
 namespace TrafficJamm.GmlToFileSystem.Gml;
 
@@ -21,25 +21,7 @@ public class DbDumpFileService(IFileSystem fileSystem, ILogger<DbDumpFileService
         {
             try
             {
-                var reference = item.ItemInfo.ItemId.ToString("X8");
-
-                var trackInfo = new TrackInfoModel
-                {
-                    Artist = item.ItemInfo.ItemInterpret,
-                    Title = item.ItemInfo.ItemTitle,
-                    CategoryPath = ParserHelpers.ParseGmlPath(item.CategoryInfo.CategoryNamePath),
-                    Filename = ParserHelpers.ParseFileName(item.ItemInfo.ItemInterpret, item.ItemInfo.ItemTitle),
-                    DurationMs = (int)item.ItemInfo.ItemDuration,
-                    DateAdded = ParserHelpers.ParseDateTimeOffset(item.ItemFiles.FileAudio.FileTimeStampCreated),
-                    DateModified = ParserHelpers.ParseDateTimeOffset(item.ItemFiles.FileAudio.FileTimeStampModified),
-                    DateAccessed = ParserHelpers.ParseDateTimeOffset(item.ItemFiles.FileAudio.FileTimeStampAccessed),
-                    Cues = GetCues(item.ItemMix),
-                    Metadata = new Dictionary<string, string> {
-                        { "Ref", item.ItemReferences.RefReference },
-                        { "ItemId", item.ItemInfo.ItemId.ToString() },
-                        { "GmlFilename", reference + ".wav" }
-                    }
-                };
+                var trackInfo = GmlDatabaseItemToTrackInfoModelMapper.Map(item);
 
                 returnValue.Add(trackInfo);
             }
@@ -51,18 +33,6 @@ public class DbDumpFileService(IFileSystem fileSystem, ILogger<DbDumpFileService
         logger.LogInformation("Converted {Count} GML items to TrackInfoModel list", returnValue.Count);
         return returnValue;
     }
-
-    private static CueSettings GetCues(GMLDatabaseItemItemMix itemMix)
-        => new()
-        {
-            MixTimeFadeIn = (int)itemMix.MixTimeFadeIn,
-            MixTimeFadeOut = (int)itemMix.MixTimeFadeOut,
-            MixPosBegin = (int)itemMix.MixPosBegin,
-            MixPosEnd = (int)itemMix.MixPosEnd,
-            MixPosNext = (int)itemMix.MixPosNext,
-            MixPosIntro = (int)itemMix.MixPosIntro,
-            MixPosOutro = (int)itemMix.MixPosOutro
-        };
 
     public string ExportToGmlTrackIndex(List<TrackInfoModel> trackList)
     {

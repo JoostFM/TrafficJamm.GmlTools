@@ -1,6 +1,6 @@
-using TrafficJamm.GmlToFileSystem.Utils;
+using GmlToFileSystem.Library.Utils;
 
-namespace TrafficJamm.GmlToFileSystem.Tests.Utils;
+namespace GmlToFileSystem.Library.Tests.Utils;
 
 public class SafeFileNameUtilTests
 {

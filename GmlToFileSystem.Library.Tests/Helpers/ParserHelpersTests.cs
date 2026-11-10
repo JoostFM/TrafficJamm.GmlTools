@@ -1,6 +1,6 @@
-﻿using TrafficJamm.GmlToFileSystem.Gml.Helpers;
+﻿using GmlToFileSystem.Library.Mappers.Helpers;
 
-namespace TrafficJamm.GmlToFileSystem.Tests.Gml.Helpers;
+namespace GmlToFileSystem.Library.Tests.Helpers;
 
 public class ParseGmlPathTests
 {

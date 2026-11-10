@@ -1,10 +1,9 @@
-﻿using TrafficJamm.GmlToFileSystem.Models;
+﻿using GmlToFileSystem.Library.Models;
 
-namespace TrafficJamm.GmlToFileSystem.Services
+namespace TrafficJamm.GmlToFileSystem.Services;
+
+public interface ITrackListService
 {
-    public interface ITrackListService
-    {
-        List<TrackInfoModel> GetFileSystemTrackList(string audioTargetLocation);
-        List<TrackInfoModel> GetTrackListTransferList(List<TrackInfoModel> gmltrackList, List<TrackInfoModel> fileSystemTrackList);
-    }
+    List<TrackInfoModel> GetFileSystemTrackList(string audioTargetLocation);
+    List<TrackInfoModel> GetTrackListTransferList(List<TrackInfoModel> gmltrackList, List<TrackInfoModel> fileSystemTrackList);
 }

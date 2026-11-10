@@ -36,6 +36,7 @@ try
 
     var gmlApi = host.Services.GetRequiredService<IGmlApi>();
     var trackListApi = host.Services.GetRequiredService<ITrackListApi>();
+
     var request = dbDumpRequestService.CreateDbDumpRequest(args);
 
     logger.LogInformation("Processing XML dump from: {Path}\nTarget output directory: {Target}", request.DbDumpFileLocationPath, request.TargetFilePath);

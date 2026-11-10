@@ -1,5 +1,5 @@
 ﻿using TrafficJamm.GmlToFileSystem.Gml.Models;
-using TrafficJamm.GmlToFileSystem.Models;
+using GmlToFileSystem.Library.Models;
 
 namespace TrafficJamm.GmlToFileSystem.Gml;
 
