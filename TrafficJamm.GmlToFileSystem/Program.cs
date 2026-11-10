@@ -20,7 +20,6 @@ var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
     {
         services.AddTransient<IFileSystem, FileSystem>();
-        services.Configure<GmlToFileSystemSettings>(context.Configuration.GetSection("GmlToFileSystemSettings"));
         services.AddGmlToFileSystemServices();
     })
     .UseSerilog((context, loggerConfig) => loggerConfig
