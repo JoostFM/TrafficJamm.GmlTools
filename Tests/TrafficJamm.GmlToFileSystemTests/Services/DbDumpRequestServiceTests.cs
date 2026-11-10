@@ -1,46 +1,55 @@
-using Microsoft.Extensions.Options;
-using TrafficJamm.GmlToFileSystem.Models;
+using NSubstitute;
 using TrafficJamm.GmlToFileSystem.Services;
+using TrafficJamm.GmlToFileSystem.Workers;
 
 namespace TrafficJamm.GmlToFileSystem.Tests.Services;
 
 public class DbDumpRequestServiceTests
 {
-    private readonly DbDumpRequestService _service = new(Options.Create(new GmlToFileSystemSettings
-    {
-        DumpFileLocation = "/configured/dumps",
-        AudioSourceLocation = "/configured/source",
-        AudioTargetLocation = "/configured/target"
-    }));
+    private readonly IDumpFolderWorker _mockDumpFolderWorker = Substitute.For<IDumpFolderWorker>();
+    private readonly DbDumpRequestService _service;
 
-    [Fact]
-    public void CreateDbDumpRequest_WithNoOptions_UsesConfiguredValues()
+    public DbDumpRequestServiceTests()
     {
-        var result = _service.CreateDbDumpRequest(["convert"]);
-
-        Assert.Equal("/configured/dumps", result.DbDumpFileLocationPath);
-        Assert.Empty(result.DbDumpFileName);
-        Assert.Equal("/configured/source", result.SourceFilePath);
-        Assert.Equal("/configured/target", result.TargetFilePath);
+        _mockDumpFolderWorker.GetLatestFileFromFolder(Arg.Any<string>())
+            .Returns("/configured/dumps/latest.xml");
+        _service = new(_mockDumpFolderWorker);
     }
 
     [Fact]
-    public void CreateDbDumpRequest_WithOptions_UsesProvidedValues()
+    public void CreateDbDumpRequest_WithNoOptions_ThrowsArgumentException()
     {
-        var result = _service.CreateDbDumpRequest(["convert", "--filename", "dump.xml", "--source", "/custom/source", "--target", "/custom/target"]);
+        var ex = Assert.Throws<ArgumentException>(() => _service.CreateDbDumpRequest(["convert"]));
+        Assert.Contains("required", ex.Message, StringComparison.OrdinalIgnoreCase);
+    }
 
-        Assert.Equal("dump.xml", result.DbDumpFileName);
+    [Fact]
+    public void CreateDbDumpRequest_WithRequiredOptions_ParsesCommandLineArguments()
+    {
+        var result = _service.CreateDbDumpRequest([
+            "convert",
+            "--dumpfilefolder", "/custom/dumps",
+            "--source", "/custom/source",
+            "--target", "/custom/target"
+        ]);
+
+        Assert.Equal("/configured/dumps/latest.xml", result.DbDumpFileLocationPath);
         Assert.Equal("/custom/source", result.SourceFilePath);
         Assert.Equal("/custom/target", result.TargetFilePath);
     }
 
     [Fact]
-    public void CreateDbDumpRequest_WithFullDumpPath_PreservesFullPath()
+    public void CreateDbDumpRequest_CallsDumpFolderWorkerWithProvidedFolder()
     {
-        const string dumpPath = "/custom/dumps/dump.xml";
+        const string dumpFolder = "/custom/dumps";
 
-        var result = _service.CreateDbDumpRequest(["convert", "--filename", dumpPath]);
+        _service.CreateDbDumpRequest([
+            "convert",
+            "--dumpfilefolder", dumpFolder,
+            "--source", "/source",
+            "--target", "/target"
+        ]);
 
-        Assert.Equal(dumpPath, result.DbDumpFileName);
+        _mockDumpFolderWorker.Received(1).GetLatestFileFromFolder(dumpFolder);
     }
 }

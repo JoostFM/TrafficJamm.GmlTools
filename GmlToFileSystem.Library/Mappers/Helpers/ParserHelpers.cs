@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
-using TrafficJamm.GmlToFileSystem.Utils;
+using GmlToFileSystem.Library.Utils;
 
-namespace TrafficJamm.GmlToFileSystem.Gml.Helpers;
+namespace GmlToFileSystem.Library.Mappers.Helpers;
 
 internal static class ParserHelpers
 {
@@ -13,7 +13,7 @@ internal static class ParserHelpers
 
         // Remove the root part prefix if present
         var path = categoryNamePath.StartsWith(RootPartPrefix)
-            ? categoryNamePath.Substring(RootPartPrefix.Length)
+            ? categoryNamePath[RootPartPrefix.Length..]
             : categoryNamePath;
 
         string returnValue;

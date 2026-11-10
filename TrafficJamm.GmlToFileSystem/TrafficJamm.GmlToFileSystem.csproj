@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>Warnings</Nullable>
-	  <VersionPrefix>1.1.0</VersionPrefix>
+	  <VersionPrefix>1.2.0</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +26,14 @@
 	  <None Update="appsettings.json">
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Gml\Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GmlToFileSystem.Library\GmlToFileSystem.Library.csproj" />
   </ItemGroup>
 
 </Project>

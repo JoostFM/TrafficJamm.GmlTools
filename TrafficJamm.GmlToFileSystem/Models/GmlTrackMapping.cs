@@ -1,4 +1,6 @@
-﻿namespace TrafficJamm.GmlToFileSystem.Models;
+﻿using GmlToFileSystem.Library.Models;
+
+namespace TrafficJamm.GmlToFileSystem.Models;
 
 public class GmlTrackMapping
 {

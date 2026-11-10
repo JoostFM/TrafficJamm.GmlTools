@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace TrafficJamm.GmlToFileSystem.Models;
+namespace GmlToFileSystem.Library.Models;
 
 public class TrackInfoModel
 {

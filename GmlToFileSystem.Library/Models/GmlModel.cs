@@ -1,7 +1,6 @@
-﻿
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
-namespace TrafficJamm.GmlToFileSystem.Gml.Models;
+namespace GmlToFileSystem.Library.Models;
 
 // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
 [Serializable()]

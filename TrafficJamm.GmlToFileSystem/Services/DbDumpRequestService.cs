@@ -1,33 +1,31 @@
 ﻿using System.CommandLine;
-using Microsoft.Extensions.Options;
 using TrafficJamm.GmlToFileSystem.Gml.Models;
-using TrafficJamm.GmlToFileSystem.Models;
+using TrafficJamm.GmlToFileSystem.Workers;
 
 namespace TrafficJamm.GmlToFileSystem.Services;
 
-public class DbDumpRequestService(IOptions<GmlToFileSystemSettings> options) : IDbDumpRequestService
+public class DbDumpRequestService(IDumpFolderWorker dumpFolderWorker) : IDbDumpRequestService
 {
-    private readonly GmlToFileSystemSettings _settings = options.Value;
 
     public DbDumpRequest CreateDbDumpRequest(string[] args)
     {
         ArgumentNullException.ThrowIfNull(args);
 
-        var filenameOption = new Option<string?>("--filename")
+        var dumpFileFolderOption = new Option<string>("--dumpfilefolder")
         {
-            Description = "The XML dump file name or full path."
+            Description = "The XML dump folder."
         };
-        var sourceOption = new Option<string?>("--source")
+        var sourceOption = new Option<string>("--source")
         {
-            Description = "The source directory containing GML audio files."
+            Description = "The source directory containing GML audio item files."
         };
-        var targetOption = new Option<string?>("--target")
+        var targetOption = new Option<string>("--target")
         {
             Description = "The target directory for the generated track index and audio files."
         };
 
         var convertCommand = new Command("convert");
-        convertCommand.Options.Add(filenameOption);
+        convertCommand.Options.Add(dumpFileFolderOption);
         convertCommand.Options.Add(sourceOption);
         convertCommand.Options.Add(targetOption);
 
@@ -39,13 +37,15 @@ public class DbDumpRequestService(IOptions<GmlToFileSystemSettings> options) : I
         {
             throw new ArgumentException(string.Join(Environment.NewLine, parseResult.Errors));
         }
+        var dumpFileFolder = parseResult.GetValue(dumpFileFolderOption) ?? throw new ArgumentException("Dump file folder is required");
 
         return new DbDumpRequest
-        {
-            DbDumpFileLocationPath = _settings.DumpFileLocation,
-            DbDumpFileName = parseResult.GetValue(filenameOption) ?? string.Empty,
-            SourceFilePath = parseResult.GetValue(sourceOption) ?? _settings.AudioSourceLocation,
-            TargetFilePath = parseResult.GetValue(targetOption) ?? _settings.AudioTargetLocation
+        {            
+            DbDumpFileLocationPath = dumpFolderWorker.GetLatestFileFromFolder(dumpFileFolder),
+            SourceFilePath = parseResult.GetValue(sourceOption) ?? throw new ArgumentException("Source path is required"),
+            TargetFilePath = parseResult.GetValue(targetOption) ?? throw new ArgumentException("Target path is required")
         };
     }
+
+   
 }
