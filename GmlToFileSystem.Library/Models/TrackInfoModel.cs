@@ -11,11 +11,18 @@ public class TrackInfoModel
     public int DurationMs { get; set; }
     public CueSettings Cues { get; set; } = new CueSettings();
     public DateTimeOffset DateAdded { get; set; }
+
+    /// <summary>
+    /// Last time the audiofile is physically modified
+    /// </summary>
     public DateTimeOffset DateModified { get; set; }
     public DateTimeOffset DateAccessed { get; set; }
 
     public Dictionary<string, string> Metadata { get; set; } = [];
 
+    /// <summary>
+    /// a unique key based on path and filename
+    /// </summary>
     [JsonIgnore]
     public string Reference => Path.Combine(CategoryPath, Filename);
 }

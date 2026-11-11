@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Tests/">
-    <Project Path="GmlToFileSystem.Library.Tests/GmlToFileSystem.Library.Tests.csproj" Id="2382a11d-2ba3-4f1c-b647-50a303af2a98" />
+    <Project Path="Tests/GmlToFileSystem.Library.Tests/GmlToFileSystem.Library.Tests.csproj" />
+    <Project Path="Tests/TrafficJamm.GmlToFileSystem.IntegrationTests/TrafficJamm.GmlToFileSystem.IntegrationTests.csproj" Id="07062352-e085-4a07-a65f-55c483339d35" />
     <Project Path="Tests/TrafficJamm.GmlToFileSystemTests/TrafficJamm.GmlToFileSystem.Tests.csproj" Id="7bb2c91e-7e85-4e92-a7b7-c43e78d1d5a7">
       <Build Solution="Debug|*" Project="false" />
     </Project>

@@ -1,10 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
-using TrafficJamm.GmlToFileSystem.Gml.Models;
+﻿using GmlToFileSystem.Library.Models;
+using Microsoft.Extensions.Logging;
 using System.IO.Abstractions;
 using System.Text.Json;
 using TrafficJamm.GmlToFileSystem.Models;
 using TrafficJamm.GmlToFileSystem.Services;
-using GmlToFileSystem.Library.Models;
 
 namespace TrafficJamm.GmlToFileSystem;
 
@@ -12,13 +11,15 @@ public class TrackListApi(ILogger<TrackListApi> logger,
     ITrackListService trackListService,
     IFileSystem fileSystem) : ITrackListApi
 {
-    public async Task<Result> TransferGmlFilesToFileSystem(DbDumpRequest request, string gmlTrackListFile)
+    public async Task<Result> TransferGmlFilesToFileSystem(string sourceFilePath, string targetFilePath, string gmlTrackListFile)
     {
         var content = await fileSystem.File.ReadAllTextAsync(gmlTrackListFile);
         var gmltrackListFilePath = JsonSerializer.Deserialize<List<TrackInfoModel>>(content, Constants.JsonOptions);
-        var fileSystemTrackListFile = trackListService.GetFileSystemTrackList(request.TargetFilePath);
+        var fileSystemTrackListFile = trackListService.GetFileSystemTrackList(targetFilePath);
 
         var trackListTransferList = trackListService.GetTrackListTransferList(gmltrackListFilePath, fileSystemTrackListFile);
+        
+        logger.LogInformation("Found {Count} new items to transfer from GML to FileSystem", trackListTransferList.Count);
 
         foreach (var trackInfo in trackListTransferList)
         {
@@ -29,7 +30,7 @@ public class TrackListApi(ILogger<TrackListApi> logger,
             }
 
             var gmlFilename = trackInfo.Metadata["GmlFilename"];
-            var source = Path.Combine(request.SourceFilePath, gmlFilename);
+            var source = Path.Combine(sourceFilePath, gmlFilename);
 
             if (!fileSystem.File.Exists(source))
             {
@@ -37,7 +38,7 @@ public class TrackListApi(ILogger<TrackListApi> logger,
                 continue;
             }
 
-            var destination = Path.Combine(request.TargetFilePath, trackInfo.Reference);
+            var destination = Path.Combine(targetFilePath, trackInfo.Reference);
             // Haal alleen de map uit het doelpad
             var destDirectory = Path.GetDirectoryName(destination);
 
@@ -46,6 +47,7 @@ public class TrackListApi(ILogger<TrackListApi> logger,
             {
                 Directory.CreateDirectory(destDirectory);
             }
+
             if (!fileSystem.File.Exists(destination))
             {
                 fileSystem.File.Copy(source, destination, true);
@@ -57,12 +59,10 @@ public class TrackListApi(ILogger<TrackListApi> logger,
             }
 
             fileSystemTrackListFile.Add(trackInfo);
-
         }
 
-        await fileSystem.File.WriteAllTextAsync(Path.Combine(request.TargetFilePath, Constants.FileSystemTrackListFile),
+        await fileSystem.File.WriteAllTextAsync(Path.Combine(targetFilePath, Constants.FileSystemTrackListFile),
             JsonSerializer.Serialize(fileSystemTrackListFile, Constants.JsonOptions));
-        await Task.CompletedTask;
 
         return new Result
         {

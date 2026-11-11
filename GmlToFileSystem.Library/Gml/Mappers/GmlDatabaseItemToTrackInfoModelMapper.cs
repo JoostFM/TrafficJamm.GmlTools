@@ -1,7 +1,8 @@
-﻿using GmlToFileSystem.Library.Mappers.Helpers;
+﻿using GmlToFileSystem.Library.Gml.Mappers.Helpers;
+using GmlToFileSystem.Library.Gml.Models;
 using GmlToFileSystem.Library.Models;
 
-namespace GmlToFileSystem.Library.Mappers;
+namespace GmlToFileSystem.Library.Gml.Mappers;
 
 public static class GmlDatabaseItemToTrackInfoModelMapper
 {

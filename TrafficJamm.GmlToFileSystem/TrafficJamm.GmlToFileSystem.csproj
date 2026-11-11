@@ -9,6 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Gml\Helpers\**" />
+    <EmbeddedResource Remove="Gml\Helpers\**" />
+    <None Remove="Gml\Helpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
 	<PackageReference Include="System.CommandLine" Version="2.0.0" />
 	<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.14" />
 	<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.14" />
@@ -29,11 +35,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Gml\Helpers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GmlToFileSystem.Library\GmlToFileSystem.Library.csproj" />
   </ItemGroup>
-
+	<PropertyGroup>
+		<NoWarn>$(NoWarn);CA1873</NoWarn>
+	</PropertyGroup>
 </Project>

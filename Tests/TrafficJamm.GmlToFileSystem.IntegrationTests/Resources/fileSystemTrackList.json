@@ -1,0 +1,146 @@
+{
+  {
+    "artist": "Fugees",
+    "title": "Ready Or Not",
+    "categoryPath": "music\\DT Rap",
+    "filename": "Fugees - Ready Or Not.wav",
+    "durationMs": 222226,
+    "cues": {
+      "mixTimeFadeIn": 0,
+      "mixTimeFadeOut": 1683,
+      "mixPosBegin": 0,
+      "mixPosEnd": 223371,
+      "mixPosNext": 222226,
+      "mixPosIntro": 10519,
+      "mixPosOutro": 223371
+    },
+    "dateAdded": "2023-02-24T19:42:25.008+01:00",
+    "dateModified": "2023-02-24T19:41:37.451+01:00",
+    "dateAccessed": "2026-04-01T18:47:56.93+02:00",
+    "metadata": {
+      "Ref": "REF00008966",
+      "ItemId": "35174",
+      "GmlFilename": "00008966.wav"
+    }
+  },
+  {
+    "artist": "A Tribe Called Quest",
+    "title": "I left my wallet in El Segundo",
+    "categoryPath": "music\\DT Rap",
+    "filename": "A Tribe Called Quest - I left my wallet in El Segundo.wav",
+    "durationMs": 220760,
+    "cues": {
+      "mixTimeFadeIn": 0,
+      "mixTimeFadeOut": 1236,
+      "mixPosBegin": 0,
+      "mixPosEnd": 224160,
+      "mixPosNext": 220760,
+      "mixPosIntro": 5964,
+      "mixPosOutro": 224160
+    },
+    "dateAdded": "2024-03-29T20:26:21.491+01:00",
+    "dateModified": "2024-03-29T20:25:23.365+01:00",
+    "dateAccessed": "2026-05-13T21:54:17.06+02:00",
+    "metadata": {
+      "Ref": "REF00008B61",
+      "ItemId": "35681",
+      "GmlFilename": "00008B61.wav"
+    }
+  },
+  {
+    "artist": "Neneh Cherry",
+    "title": "Inna City Mamma",
+    "categoryPath": "music\\DT Rap",
+    "filename": "Neneh Cherry - Inna City Mamma.wav",
+    "durationMs": 284896,
+    "cues": {
+      "mixTimeFadeIn": 0,
+      "mixTimeFadeOut": 2004,
+      "mixPosBegin": 0,
+      "mixPosEnd": 288220,
+      "mixPosNext": 284896,
+      "mixPosIntro": 0,
+      "mixPosOutro": 288220
+    },
+    "dateAdded": "2026-01-09T17:00:04.906+01:00",
+    "dateModified": "2026-01-09T16:59:17.081+01:00",
+    "dateAccessed": "2026-05-09T13:52:10.657+02:00",
+    "metadata": {
+      "Ref": "REF00008CF7",
+      "ItemId": "36087",
+      "GmlFilename": "00008CF7.wav"
+    }
+  },
+  {
+    "artist": "P.M. Dawn ft. Ky-Mani",
+    "title": "Gotta be... movin\u0027on up",
+    "categoryPath": "music\\DT Rap",
+    "filename": "P.M. Dawn ft. Ky-Mani - Gotta be... movin\u0027on up.wav",
+    "durationMs": 215516,
+    "cues": {
+      "mixTimeFadeIn": 0,
+      "mixTimeFadeOut": 602,
+      "mixPosBegin": 0,
+      "mixPosEnd": 218240,
+      "mixPosNext": 215516,
+      "mixPosIntro": 3739,
+      "mixPosOutro": 218240
+    },
+    "dateAdded": "2024-07-26T18:21:57.134+02:00",
+    "dateModified": "2024-07-26T18:21:56.154+02:00",
+    "dateAccessed": "2026-02-14T12:54:05.005+01:00",
+    "metadata": {
+      "Ref": "REF00008D2D",
+      "ItemId": "36141",
+      "GmlFilename": "00008D2D.wav"
+    }
+  },
+  {
+    "artist": "Public Enemy",
+    "title": "He got game",
+    "categoryPath": "music\\DT Rap",
+    "filename": "Public Enemy - He got game.wav",
+    "durationMs": 199107,
+    "cues": {
+      "mixTimeFadeIn": 0,
+      "mixTimeFadeOut": 0,
+      "mixPosBegin": 0,
+      "mixPosEnd": 199107,
+      "mixPosNext": 199107,
+      "mixPosIntro": 0,
+      "mixPosOutro": 199107
+    },
+    "dateAdded": "2024-07-26T18:22:09.542+02:00",
+    "dateModified": "2024-07-26T18:22:08.791+02:00",
+    "dateAccessed": "2026-04-22T17:51:36.138+02:00",
+    "metadata": {
+      "Ref": "REF00008D2E",
+      "ItemId": "36142",
+      "GmlFilename": "00008D2E.wav"
+    }
+  },
+  {
+    "artist": "Queen and Whyclef Jean ft. Pras \u0026 Free",
+    "title": "Another one bites the dust",
+    "categoryPath": "music\\DT Rap",
+    "filename": "Queen and Whyclef Jean ft. Pras \u0026 Free - Another one bites the dust.wav",
+    "durationMs": 239347,
+    "cues": {
+      "mixTimeFadeIn": 0,
+      "mixTimeFadeOut": 0,
+      "mixPosBegin": 0,
+      "mixPosEnd": 239347,
+      "mixPosNext": 239347,
+      "mixPosIntro": 0,
+      "mixPosOutro": 239347
+    },
+    "dateAdded": "2024-07-26T18:22:23.119+02:00",
+    "dateModified": "2024-07-26T18:22:22.049+02:00",
+    "dateAccessed": "2026-05-14T16:16:06.017+02:00",
+    "metadata": {
+      "Ref": "REF00008D2F",
+      "ItemId": "36143",
+      "GmlFilename": "00008D2F.wav"
+    }
+  }
+}

@@ -1,9 +1,15 @@
-﻿using TrafficJamm.GmlToFileSystem.Gml.Models;
-using TrafficJamm.GmlToFileSystem.Models;
+﻿using TrafficJamm.GmlToFileSystem.Models;
 
 namespace TrafficJamm.GmlToFileSystem;
 
 public interface ITrackListApi
 {
-    Task<Result> TransferGmlFilesToFileSystem(DbDumpRequest request, string gmlTrackListFile);
+    /// <summary>
+    /// Compare GmlTrackInfo with existing files, copy the missing files with 
+    /// </summary>
+    /// <param name="sourceFilePath"></param>
+    /// <param name="targetFilePath"></param>
+    /// <param name="gmlTrackListFile"></param>
+    /// <returns></returns>
+    Task<Result> TransferGmlFilesToFileSystem(string sourceFilePath, string targetFilePath, string gmlTrackListFile);
 }
