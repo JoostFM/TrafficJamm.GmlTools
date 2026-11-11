@@ -6,8 +6,7 @@ using Serilog;
 using System.IO.Abstractions;
 using System.Reflection;
 using TrafficJamm.GmlToFileSystem;
-using TrafficJamm.GmlToFileSystem.Models;
-using TrafficJamm.GmlToFileSystem.Services;
+using TrafficJamm.GmlToFileSystem.Process;
 
 var host = Host.CreateDefaultBuilder(args)
     .ConfigureAppConfiguration((context, config) =>
@@ -20,44 +19,30 @@ var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
     {
         services.AddTransient<IFileSystem, FileSystem>();
-        services.AddGmlToFileSystemServices();
+        services.AddGmlToFileSystemServices();        
     })
     .UseSerilog((context, loggerConfig) => loggerConfig
         .ReadFrom.Configuration(context.Configuration))
     .Build();
 
 var logger = host.Services.GetRequiredService<ILogger<Program>>();
-var dbDumpRequestService = host.Services.GetRequiredService<IDbDumpRequestService>();
 
 try
 {
     var version = Assembly.GetExecutingAssembly().GetName().Version;
     logger.LogInformation("Starting GML conversion process... Version: {Version}", version);
 
-    var gmlApi = host.Services.GetRequiredService<IGmlApi>();
-    var trackListApi = host.Services.GetRequiredService<ITrackListApi>();
+    var process = host.Services.GetRequiredService<IGmlToFileSystemProcessor>();
 
-    var request = dbDumpRequestService.CreateDbDumpRequest(args);
-
-    logger.LogInformation("Processing XML dump from: {Path}\nTarget output directory: {Target}", request.DbDumpFileLocationPath, request.TargetFilePath);
-
-
-    var result = await gmlApi.CreateTrackListFromXmlDbDumpGmlAsync(request);
-
+    var result = await process.ProcessAsync(args);
+        
     if (!result.Success)
     {
         logger.LogError("Conversion failed. Message: {Message}", result.Message);
         return 1;
     }
 
-    logger.LogInformation("Conversion completed successfully. Output: {Output}", result.Data);
-    logger.LogInformation("Message: {Message}", result.Message);
-
-    var copyResult = await trackListApi.TransferGmlFilesToFileSystem(request, result.Data);
-    if (copyResult.Success)
-    {
-        logger.LogInformation("GML files transferred successfully. Message: {Message}", copyResult.Message);
-    }
+    logger.LogInformation("Conversion completed successfully. {Message}", result.Message);
 }
 catch (Exception ex)
 {

@@ -1,7 +1,7 @@
 namespace TrafficJamm.GmlToFileSystem.IntegrationTests.StepDefinitions
 {
     [Binding]
-    public sealed class CalculatorStepDefinitions
+    public sealed class ConvertStepDefinitions
     {
         // For additional details on Reqnroll step definitions see https://go.reqnroll.net/doc-stepdef
 

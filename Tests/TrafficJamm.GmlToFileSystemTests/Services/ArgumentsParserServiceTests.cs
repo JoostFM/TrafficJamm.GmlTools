@@ -4,12 +4,12 @@ using TrafficJamm.GmlToFileSystem.Workers;
 
 namespace TrafficJamm.GmlToFileSystem.Tests.Services;
 
-public class DbDumpRequestServiceTests
+public class ArgumentsParserServiceTests
 {
     private readonly IDumpFolderWorker _mockDumpFolderWorker = Substitute.For<IDumpFolderWorker>();
-    private readonly DbDumpRequestService _service;
+    private readonly ArgumentsParserService _service;
 
-    public DbDumpRequestServiceTests()
+    public ArgumentsParserServiceTests()
     {
         _mockDumpFolderWorker.GetLatestFileFromFolder(Arg.Any<string>())
             .Returns("/configured/dumps/latest.xml");
@@ -19,14 +19,14 @@ public class DbDumpRequestServiceTests
     [Fact]
     public void CreateDbDumpRequest_WithNoOptions_ThrowsArgumentException()
     {
-        var ex = Assert.Throws<ArgumentException>(() => _service.CreateDbDumpRequest(["convert"]));
+        var ex = Assert.Throws<ArgumentException>(() => _service.ProcesCliArguments(["convert"]));
         Assert.Contains("required", ex.Message, StringComparison.OrdinalIgnoreCase);
     }
 
     [Fact]
     public void CreateDbDumpRequest_WithRequiredOptions_ParsesCommandLineArguments()
     {
-        var result = _service.CreateDbDumpRequest([
+        var result = _service.ProcesCliArguments([
             "convert",
             "--dumpfilefolder", "/custom/dumps",
             "--source", "/custom/source",
@@ -43,7 +43,7 @@ public class DbDumpRequestServiceTests
     {
         const string dumpFolder = "/custom/dumps";
 
-        _service.CreateDbDumpRequest([
+        _service.ProcesCliArguments([
             "convert",
             "--dumpfilefolder", dumpFolder,
             "--source", "/source",

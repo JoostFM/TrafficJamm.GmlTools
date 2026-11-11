@@ -1,4 +1,4 @@
-﻿using GmlToFileSystem.Library.Mappers.Helpers;
+﻿using GmlToFileSystem.Library.Gml.Mappers.Helpers;
 
 namespace GmlToFileSystem.Library.Tests.Helpers;
 

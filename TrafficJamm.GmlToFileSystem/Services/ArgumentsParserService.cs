@@ -4,10 +4,9 @@ using TrafficJamm.GmlToFileSystem.Workers;
 
 namespace TrafficJamm.GmlToFileSystem.Services;
 
-public class DbDumpRequestService(IDumpFolderWorker dumpFolderWorker) : IDbDumpRequestService
+public class ArgumentsParserService(IDumpFolderWorker dumpFolderWorker) : IArgumentsParserService
 {
-
-    public DbDumpRequest CreateDbDumpRequest(string[] args)
+    public DbDumpRequest ProcesCliArguments(string[] args)
     {
         ArgumentNullException.ThrowIfNull(args);
 

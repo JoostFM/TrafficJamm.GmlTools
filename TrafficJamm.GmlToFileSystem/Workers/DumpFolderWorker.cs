@@ -17,6 +17,7 @@ public class DumpFolderWorker(IFileSystem fileSystem) : IDumpFolderWorker
         try
         {
             var files = fileSystem.Directory.GetFiles(folderPath, $"*{XmlExtension}");
+
             if (files.Length == 0)
             {
                 return null;

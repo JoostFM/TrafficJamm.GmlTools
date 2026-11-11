@@ -2,12 +2,12 @@
 
 namespace TrafficJamm.GmlToFileSystem.Services;
 
-public interface IDbDumpRequestService
+public interface IArgumentsParserService
 {
     /// <summary>
     /// Process CLI arguments
     /// </summary>
     /// <param name="args"></param>
     /// <returns></returns>
-    DbDumpRequest CreateDbDumpRequest(string[] args);
+    DbDumpRequest ProcesCliArguments(string[] args);
 }

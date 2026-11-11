@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using GmlToFileSystem.Library.Utils;
 
-namespace GmlToFileSystem.Library.Mappers.Helpers;
+namespace GmlToFileSystem.Library.Gml.Mappers.Helpers;
 
 internal static class ParserHelpers
 {
