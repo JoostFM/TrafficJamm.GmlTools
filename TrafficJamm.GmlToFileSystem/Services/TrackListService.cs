@@ -2,10 +2,11 @@
 using System.IO.Abstractions;
 using System.Text.Json;
 using TrafficJamm.GmlToFileSystem.Models;
+using TrafficJamm.GmlToFileSystem.Workers;
 
 namespace TrafficJamm.GmlToFileSystem.Services;
 
-public class TrackListService(IFileSystem fileSystem) : ITrackListService
+public class TrackListService(ITrackListFilterWorker trackListFilterWorker, IFileSystem fileSystem) : ITrackListService
 {
     public List<TrackInfoModel> GetFileSystemTrackList(string audioTargetLocation)
     {
@@ -27,6 +28,5 @@ public class TrackListService(IFileSystem fileSystem) : ITrackListService
     }
 
     public List<TrackInfoModel> GetTrackListTransferList(List<TrackInfoModel> gmltrackList, List<TrackInfoModel> fileSystemTrackList)
-        => [.. gmltrackList.Where(t => !fileSystemTrackList.Any(f => f.Reference == t.Reference))];
-        
+        => trackListFilterWorker.GetItemsToUpdate(gmltrackList, fileSystemTrackList);
 }

@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace GmlToFileSystem.Library.Gml.Services;
 
-public class GmlDumpFileService(IGmlDumpFilePathWorker gmlDumpFilePathWorker, IGmlItemReader gmlItemReader, ILogger logger) : IGmlDumpFileService
+public class GmlDumpFileService(IGmlDumpFilePathWorker gmlDumpFilePathWorker, IGmlItemReader gmlItemReader, ILogger<GmlDumpFileService> logger) : IGmlDumpFileService
 {
     public async Task<List<TrackInfoModel>> ConvertGmlDumpFileToTrackListAsync(string gmlDumpFilePath)
     {

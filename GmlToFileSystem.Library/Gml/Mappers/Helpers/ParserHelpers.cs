@@ -20,17 +20,17 @@ internal static class ParserHelpers
 
         if (path.StartsWith(DjFolderPrefix.TrimStart('\\')))
         {
-            // Strip the leading prefix, replace with \Shows\
-            returnValue = $"\\Shows\\{path[DjFolderPrefix.TrimStart('\\').Length..]}";
+            // Strip the leading prefix, replace with Shows
+            returnValue = $"Shows\\{path[DjFolderPrefix.TrimStart('\\').Length..]}";
         }
         else if (path.StartsWith(JingleFolderPrefix.TrimStart('\\')))
         {
-            // Strip the leading prefix, replace with \Jingles\
-            returnValue = $"\\Jingles\\{path[JingleFolderPrefix.TrimStart('\\').Length..]}";
+            // Strip the leading prefix, replace with Jingles
+            returnValue = $"Jingles\\{path[JingleFolderPrefix.TrimStart('\\').Length..]}";
         }
         else
         {
-            returnValue = $"\\music\\{path.TrimStart('\\')}";
+            returnValue = $"music\\{path.TrimStart('\\')}";
         }
 
         return returnValue.GetSafeFilePath();
