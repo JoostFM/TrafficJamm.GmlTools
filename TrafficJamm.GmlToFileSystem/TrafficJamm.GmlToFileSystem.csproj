@@ -8,11 +8,6 @@
 	  <VersionPrefix>1.2.0</VersionPrefix>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Gml\Helpers\**" />
-    <EmbeddedResource Remove="Gml\Helpers\**" />
-    <None Remove="Gml\Helpers\**" />
-  </ItemGroup>
 
   <ItemGroup>
 	<PackageReference Include="System.CommandLine" Version="2.0.0" />
