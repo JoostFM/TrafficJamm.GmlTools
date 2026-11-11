@@ -26,7 +26,7 @@ public class GmlToFileSystemProcessor(IGmlApi gmlApi, ITrackListApi trackListApi
             };
         }
 
-        var fileName = ExportToGmlTrackIndex(gmlTrackList);
+        var fileName = ExportToGmlTrackIndex(gmlTrackList, request.TargetFilePath);
 
         await trackListApi.TransferGmlFilesToFileSystem(request.SourceFilePath, request.TargetFilePath, fileName);
 
@@ -40,11 +40,11 @@ public class GmlToFileSystemProcessor(IGmlApi gmlApi, ITrackListApi trackListApi
         };
     }
 
-    private string ExportToGmlTrackIndex(List<TrackInfoModel> trackList)
+    private string ExportToGmlTrackIndex(List<TrackInfoModel> trackList, string outputDirectory)
     {
         var content = JsonSerializer.Serialize(trackList, Constants.JsonOptions);
 
-        var filename = Path.Combine(Constants.OutputFilePath, $"GmlTrackIndex_{DateTime.Now:yyyyMMdd_HHmmss}.json");
+        var filename = Path.Combine(outputDirectory, $"GmlTrackIndex_{DateTime.Now:yyyyMMdd_HHmmss}.json");
 
         fileSystem.File.WriteAllText(filename, content);
 

@@ -13,5 +13,14 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\TrafficJamm.GmlToFileSystem\TrafficJamm.GmlToFileSystem.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>

@@ -7,6 +7,11 @@ public class GmlDumpFilePathWorker(IFileSystem fileSystem, ILogger<GmlDumpFilePa
 {
     public async Task<string> GetDbDumpFilePathAsync(string gmlDumpFilePath)
     {
+        if (fileSystem.File.Exists(gmlDumpFilePath))
+        {
+            return gmlDumpFilePath;
+        }
+
         if (!fileSystem.Directory.Exists(gmlDumpFilePath))
         {
             throw new DirectoryNotFoundException($"The provided directory path '{gmlDumpFilePath}' does not exist.");

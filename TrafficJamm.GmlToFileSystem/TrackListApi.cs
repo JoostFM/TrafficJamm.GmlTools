@@ -39,18 +39,18 @@ public class TrackListApi(ILogger<TrackListApi> logger,
             }
 
             var destination = Path.Combine(targetFilePath, trackInfo.Reference);
-            // Haal alleen de map uit het doelpad
+            var existingTrackIndex = fileSystemTrackListFile.FindIndex(existingTrack => existingTrack.Reference == trackInfo.Reference);
+            var destinationExists = fileSystem.File.Exists(destination);
             var destDirectory = Path.GetDirectoryName(destination);
 
-            // Maak de map aan als deze nog niet bestaat
-            if (!string.IsNullOrEmpty(destDirectory) && !Directory.Exists(destDirectory))
+            if (!string.IsNullOrEmpty(destDirectory) && !fileSystem.Directory.Exists(destDirectory))
             {
-                Directory.CreateDirectory(destDirectory);
+                fileSystem.Directory.CreateDirectory(destDirectory);
             }
 
-            if (!fileSystem.File.Exists(destination))
+            if (existingTrackIndex >= 0 || !destinationExists)
             {
-                fileSystem.File.Copy(source, destination, true);
+                fileSystem.File.Copy(source, destination, overwrite: true);
                 logger.LogInformation("Copied {GmlFilename} to {Target}", gmlFilename, destination);
             }
             else
@@ -58,7 +58,14 @@ public class TrackListApi(ILogger<TrackListApi> logger,
                 logger.LogWarning("Already exists, skipping {GmlFilename} to '{Reference}' ", gmlFilename, trackInfo.Reference);
             }
 
-            fileSystemTrackListFile.Add(trackInfo);
+            if (existingTrackIndex >= 0)
+            {
+                fileSystemTrackListFile[existingTrackIndex] = trackInfo;
+            }
+            else
+            {
+                fileSystemTrackListFile.Add(trackInfo);
+            }
         }
 
         await fileSystem.File.WriteAllTextAsync(Path.Combine(targetFilePath, Constants.FileSystemTrackListFile),

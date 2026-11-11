@@ -1,18 +1,8 @@
-Feature: Calculator
+Feature: Convertor
 
-Simple calculator for adding two numbers
-
-@mytag
-Scenario: Add two numbers
-	Given the first number is 50
-	And the second number is 70
-	When the two numbers are added
-	Then the result should be 120
-
-	
-Scenario: New Items in Source for an Existing Target Collection
-	Given a xmldumpfile with ten DatabaseItems
-	And ten corresponding items in the source folder
-	And the five items already converted in the target folder
-	When executed
-	Then the five missing items are converted
+Scenario: New and modified items in source for an existing target collection
+	Given the GML dump is staged
+	And the source folder contains all nine matching audio files
+	And six tracks already exist in the target collection
+	When conversion is executed
+	Then the three missing tracks and the modified track are transferred
